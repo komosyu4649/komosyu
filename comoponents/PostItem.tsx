@@ -1,49 +1,18 @@
 import style from 'styles/PostItem.module.scss'
+import { Post, Posts } from 'type'
 
-const PostItem = () => {
-  const items = [
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-    {
-      category: 'コラム',
-      title: '技術ブログをはじめてみました',
-      time: '2022/09/24',
-    },
-  ]
+const PostItem = ({ post }: { post: Post }) => {
   return (
     <>
-      {items.map((item) => (
-        <li className={style.item} key={item.title}>
-          <a href="" className={style.itemLink}>
-            <span className={style.itemLinkCategory}>{item.category}</span>
-            <p className={style.itemLinkTitle}>{item.title}</p>
-            <time className={style.itemLinkTime}>{item.time}</time>
-          </a>
-        </li>
-      ))}
+      <li className={style.item}>
+        <a href={`/post/${post.slug}`} className={style.itemLink}>
+          <span className={style.itemLinkCategory}>
+            {post.frontMatter.category}
+          </span>
+          <p className={style.itemLinkTitle}>{post.frontMatter.title}</p>
+          <time className={style.itemLinkTime}>{post.frontMatter.date}</time>
+        </a>
+      </li>
     </>
   )
 }
