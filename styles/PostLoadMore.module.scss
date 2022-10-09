@@ -1,0 +1,11 @@
+@use 'variables' as var;
+.button {
+  width: 100%;
+  min-height: 6.5rem;
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var.$white;
+  border: 2px solid var.$white;
+  border-radius: 1.5rem;
+}

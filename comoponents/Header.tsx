@@ -1,4 +1,5 @@
 import React from 'react'
+import style from 'styles/Header.module.scss'
 
 const Header = () => {
   const menus = [
@@ -13,16 +14,16 @@ const Header = () => {
     },
   ]
   return (
-    <header className="">
-      <div className="">
-        <a href="" className="">
+    <header className={style.container}>
+      <div className={style.inner}>
+        <a href="" className={style.logo}>
           komosyu
         </a>
-        <nav className="">
-          <ul className="">
+        <nav className={style.nav}>
+          <ul className={style.navList}>
             {menus.map((menu) => (
-              <li className="" key={menu.item}>
-                <a href="" className="">
+              <li className={style.navItem} key={menu.item}>
+                <a href="" className={style.navItemLink}>
                   {menu.item}
                 </a>
               </li>

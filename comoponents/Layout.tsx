@@ -8,7 +8,7 @@ type Children = {
 
 const Layout = ({ children }: Children) => {
   return (
-    <div>
+    <div className="wrapper" id="wrapper">
       <Header />
       <main>{children}</main>
       <Footer />
