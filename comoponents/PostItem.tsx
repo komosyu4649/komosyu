@@ -36,7 +36,7 @@ const PostItem = () => {
   return (
     <>
       {items.map((item) => (
-        <li className={style.item}>
+        <li className={style.item} key={item.title}>
           <a href="" className={style.itemLink}>
             <span className={style.itemLinkCategory}>{item.category}</span>
             <p className={style.itemLinkTitle}>{item.title}</p>

@@ -22,7 +22,7 @@ const PostCategories = () => {
     <div className={style.container}>
       <ul className={style.list}>
         {categories.map((category) => (
-          <li className={style.item}>
+          <li className={style.item} key={category.item}>
             <a href={category.item} className={style.itemLink}>
               {category.item}
             </a>

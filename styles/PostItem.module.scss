@@ -2,7 +2,8 @@
 
 .item {
   background-color: var.$purple_week;
-  border-radius: 2rem;
+  //   border-radius: 2rem;
+  border-radius: 1.5rem;
 }
 .itemLink {
   display: flex;
@@ -43,3 +44,40 @@
   font-size: 1.2rem;
   //   font-weight: bold;
 }
+
+// row mode
+
+// .item {
+//   background-color: var.$purple_week;
+//   border-radius: 1.5rem;
+// }
+// .itemLink {
+//   position: relative;
+//   display: block;
+//   padding: 2rem 2rem 3rem;
+// }
+// .itemLinkCategory {
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 2.5rem;
+//   padding: 0.25rem 2.5rem;
+//   font-size: 1.2rem;
+//   //   font-weight: bold;
+//   //   border: 2px solid var.$white;
+//   border: 1px solid var.$white;
+//   border-radius: 1.5rem;
+// }
+// .itemLinkTitle {
+//   // margin-top: 2rem;
+//   margin-top: 1.5rem;
+//   font-size: 1.6rem;
+//   font-weight: bold;
+// }
+// .itemLinkTime {
+//   position: absolute;
+//   top: 2rem;
+//   right: 2rem;
+//   font-size: 1.2rem;
+//   opacity: 0.6;
+// }
