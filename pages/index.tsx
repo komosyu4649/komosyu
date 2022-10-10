@@ -18,7 +18,7 @@ const Home: NextPage<Posts> = ({ posts }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync('posts')
-  const posts = files.map((fileName) => {
+  let posts = files.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '')
     const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
     const { data } = matter(fileContent)
@@ -27,6 +27,11 @@ export const getStaticProps: GetStaticProps = async () => {
       slug,
     }
   })
+
+  posts = posts.sort((a, b) =>
+    new Date(a.frontMatter.date) > new Date(b.frontMatter.date) ? -1 : 1
+  )
+
   return {
     props: {
       posts,
