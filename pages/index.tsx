@@ -7,7 +7,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { Posts } from 'type'
 
-const Home: NextPage<Posts> = ({ posts }: Posts) => {
+const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
       <PostCategories />
