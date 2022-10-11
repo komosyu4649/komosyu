@@ -19,7 +19,6 @@ const Post: NextPage<{
   frontMatter: PostFrontMatter
   content: string
 }> = ({ frontMatter, content }) => {
-  console.log(frontMatter)
   const props = { frontMatter, content }
   return (
     <Layout>
