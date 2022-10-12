@@ -1,0 +1,8 @@
+@use 'variables' as var;
+
+.link {
+  background-image: linear-gradient(var.$white, var.$white);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+}

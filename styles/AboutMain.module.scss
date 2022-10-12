@@ -1,0 +1,49 @@
+@use 'variables' as var;
+
+.container {
+  margin-top: 10rem;
+}
+.title {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.mainPart {
+  margin-top: 6.5rem;
+}
+.mainPartTitle {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.mainPartContentText {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+.mainPartContentGarelly {
+  margin-top: 1rem;
+}
+.mainPartContentGarellyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20.5rem, 1fr));
+  //   gap: 0.5rem;
+  gap: 0.667rem;
+  height: 20.5rem;
+}
+.mainPartContentGarellyItem {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.mainPartContentList {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 0.5rem;
+}
+.mainPartContentItem {
+  font-size: 1.6rem;
+}
+.mainPartContentItemLink {
+  //   background-image: linear-gradient(var.$white, var.$white);
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 1px;
+  //   background-position: bottom;
+}
