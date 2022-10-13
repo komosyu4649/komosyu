@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import style from 'styles/WorksMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
+import Link from 'next/link'
 
 const WorksMain = () => {
   const worksItems = [
@@ -88,10 +89,11 @@ const WorksMain = () => {
 
   function widthLayout(index: number) {
     if (index % 11 === 3) {
-      console.log(index)
-      return '556'
-    } else if (index % 11 === 7) {
-      return '556'
+      return '555'
+    } else if (index % 11 === 9) {
+      return '270'
+    } else if (index % 11 === 10) {
+      return '555'
     } else {
       return '270'
     }
@@ -100,7 +102,10 @@ const WorksMain = () => {
   function heightLayout(index: number) {
     if (index % 11 === 3) {
       return '473'
-    } else if (index % 11 === 7) {
+    } else if (index % 11 === 9) {
+      // return '473'
+      return '473'
+    } else if (index % 11 === 10) {
       return '473'
     } else {
       return '200'
@@ -112,25 +117,28 @@ const WorksMain = () => {
       <ul className={style.list}>
         {worksItems.map((worksItem, index) => (
           <li className={style.item} key={index}>
-            <div className={`${styleImg.default} ${style.itemImg}`}>
-              <Image
-                src={worksItem.src}
-                alt=""
-                // layout="fill"
-                layout="responsive"
-                objectFit="cover"
-                // objectFit="contain"
-                // width={index % 6 === 3 ? '556' : '270'}
-                width={widthLayout(index)}
-                // height={index % 6 === 3 ? '473' : '200'}
-                height={heightLayout(index)}
-              />
-              {/* <img src={worksItem.src} alt="" className="" /> */}
-            </div>
-            <div className={style.itemContent}>
-              <span className={style.itemContentName}>{worksItem.name}</span>
-              <span className={style.itemContentType}>{worksItem.type}</span>
-            </div>
+            <Link href="">
+              <a className={style.itemLink}>
+                <div className={`${styleImg.default} ${style.itemLinkImg}`}>
+                  <Image
+                    src={worksItem.src}
+                    alt=""
+                    layout="responsive"
+                    objectFit="cover"
+                    width={widthLayout(index)}
+                    height={heightLayout(index)}
+                  />
+                </div>
+                <div className={style.itemLinkContent}>
+                  <span className={style.itemLinkContentName}>
+                    {worksItem.name}
+                  </span>
+                  <span className={style.itemLinkContentType}>
+                    {worksItem.type}
+                  </span>
+                </div>
+              </a>
+            </Link>
           </li>
         ))}
       </ul>
