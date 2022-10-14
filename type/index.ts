@@ -40,3 +40,14 @@ export type PostContext = {
   }
   content: string
 }
+
+export type workDetail = {
+  thumbnail: string
+  name: string
+  type: string
+  url: string
+  description: string
+  responsible: string
+  technology: string
+  about: string
+}

@@ -5,26 +5,15 @@ import {
   NextPage,
 } from 'next'
 import fs from 'fs'
-
-type workDetailProps = {
-  thumbnail: string
-  name: string
-  type: string
-  url: string
-  description: string
-  responsible: string
-  technology: string
-  about: string
-}
+import { workDetail } from 'type'
 
 const path = 'pages/works/detail/data'
 
-const Detail: NextPage<{ workData: workDetailProps }> = ({
+const Detail: NextPage<{ workData: workDetail }> = ({
   workData,
 }: {
-  workData: workDetailProps
+  workData: workDetail
 }) => {
-  console.log(workData)
   return <div>test</div>
 }
 
