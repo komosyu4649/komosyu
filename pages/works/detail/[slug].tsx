@@ -5,14 +5,14 @@ import {
   NextPage,
 } from 'next'
 import fs from 'fs'
-import { workDetail } from 'type'
+import { WorkDetail } from 'type'
 
 const path = 'pages/works/detail/data'
 
-const Detail: NextPage<{ workData: workDetail }> = ({
+const Detail: NextPage<{ workData: WorkDetail }> = ({
   workData,
 }: {
-  workData: workDetail
+  workData: WorkDetail
 }) => {
   return <div>test</div>
 }

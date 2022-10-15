@@ -3,32 +3,14 @@ import WorksMain from 'comoponents/WorksMain'
 import { GetStaticProps, NextPage } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { workDetail } from 'type'
+import { Works } from 'type'
 
 const path = 'pages/works/detail/data'
 
-type Test = {
-  props: [
-    slug: string,
-    workData: {
-      thumbnail: string
-      name: string
-      type: string
-      url: string
-      description: string
-      responsible: string
-      technology: string
-      about: string
-    }
-  ]
-}
-
-const Works: NextPage<Test> = ({ props }) => {
-  console.log(props)
+const Works: NextPage<Works> = ({ works }) => {
   return (
     <Layout>
-      test
-      {/* <WorksMain /> */}
+      <WorksMain works={works} />
     </Layout>
   )
 }
@@ -44,6 +26,7 @@ export const getStaticProps: GetStaticProps = async () => {
       slug,
     }
   })
+
   return {
     props: {
       works,

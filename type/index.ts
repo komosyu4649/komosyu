@@ -41,7 +41,23 @@ export type PostContext = {
   content: string
 }
 
-export type workDetail = {
+export type Works = {
+  works: [
+    slug: string,
+    workData: {
+      thumbnail: string
+      name: string
+      type: string
+      url: string
+      description: string
+      responsible: string
+      technology: string
+      about: string
+    }
+  ]
+}
+
+export type WorkDetail = {
   thumbnail: string
   name: string
   type: string

@@ -2,91 +2,9 @@ import Image from 'next/image'
 import style from 'styles/WorksMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import Link from 'next/link'
+import { WorkDetail, Works } from 'type'
 
-const WorksMain = () => {
-  const worksItems = [
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-    {
-      src: '/asset/img/common/komosyu.jpg',
-      name: 'ryoshiro tsuji',
-      type: 'webサイト',
-    },
-  ]
-
+const WorksMain = ({ works }: Works) => {
   function widthLayout(index: number) {
     if (index % 11 === 3) {
       return '555'
@@ -112,35 +30,51 @@ const WorksMain = () => {
     }
   }
 
+  type Test = {
+    slug: string | null
+    workData: {
+      thumbnail: string | null
+      name: string | null
+      type: string | null
+      url: string | null
+      description: string | null
+      responsible: string | null
+      technology: string | null
+      about: string | null
+    }
+  }
+
   return (
     <div className={style.container}>
       <ul className={style.list}>
-        {worksItems.map((worksItem, index) => (
-          <li className={style.item} key={index}>
-            <Link href="">
-              <a className={style.itemLink}>
-                <div className={`${styleImg.default} ${style.itemLinkImg}`}>
-                  <Image
-                    src={worksItem.src}
-                    alt=""
-                    layout="responsive"
-                    objectFit="cover"
-                    width={widthLayout(index)}
-                    height={heightLayout(index)}
-                  />
-                </div>
-                <div className={style.itemLinkContent}>
-                  <span className={style.itemLinkContentName}>
-                    {worksItem.name}
-                  </span>
-                  <span className={style.itemLinkContentType}>
-                    {worksItem.type}
-                  </span>
-                </div>
-              </a>
-            </Link>
-          </li>
-        ))}
+        {works.map((work, index) =>
+          work.workData.thumbnail !== '' ? (
+            <li className={style.item} key={index}>
+              <Link href={`/works/detail/${work.slug}`}>
+                <a className={style.itemLink}>
+                  <div className={`${styleImg.default} ${style.itemLinkImg}`}>
+                    <Image
+                      src={work.workData.thumbnail}
+                      alt=""
+                      layout="responsive"
+                      objectFit="cover"
+                      width={widthLayout(index)}
+                      height={heightLayout(index)}
+                    />
+                  </div>
+                  <div className={style.itemLinkContent}>
+                    <span className={style.itemLinkContentName}>
+                      {work.workData.name}
+                    </span>
+                    <span className={style.itemLinkContentType}>
+                      {work.workData.type}
+                    </span>
+                  </div>
+                </a>
+              </Link>
+            </li>
+          ) : null
+        )}
       </ul>
     </div>
   )
