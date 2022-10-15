@@ -1,3 +1,6 @@
+.container {
+  margin-top: 10rem;
+}
 .list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -28,6 +31,7 @@
 .itemLinkContent {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 .itemLinkContentName {
