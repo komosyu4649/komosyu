@@ -6,6 +6,8 @@ import {
 } from 'next'
 import fs from 'fs'
 import { WorkDetail } from 'type'
+import WorkDetailMain from 'comoponents/WorkDetailMain'
+import Layout from 'comoponents/Layout'
 
 const path = 'pages/works/detail/data'
 
@@ -14,7 +16,11 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
 }: {
   workData: WorkDetail
 }) => {
-  return <div>test</div>
+  return (
+    <Layout>
+      <WorkDetailMain workData={workData} />
+    </Layout>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async (params) => {
