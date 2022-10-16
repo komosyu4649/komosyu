@@ -3,7 +3,7 @@
 .container {
   margin-top: 10rem;
 }
-.main {
+.header {
   position: relative;
   //   margin-bottom: 4rem;
   //   padding-bottom: 4rem;
@@ -19,21 +19,21 @@
     background-color: var.$white;
   }
 }
-.mainImg {
+.headerImg {
   width: 100%;
   height: 54rem;
   //   height: 48rem;
 }
-.mainContent {
+.headerContent {
   margin-top: 4rem;
   //   margin-top: 2.5rem;
 }
-.mainContentTitle {
+.headerContentTitle {
   margin-bottom: 1rem;
   font-size: 2.4rem;
   font-weight: bold;
 }
-.mainContentTitleName {
+.headerContentTitleName {
   position: relative;
   margin-right: 3rem;
   padding-right: 3rem;
@@ -47,30 +47,30 @@
     background-color: var.$white;
   }
 }
-.mainContentUrl {
+.headerContentUrl {
   font-size: 1.2rem;
 }
-.mainContentDescription {
+.headerContentDescription {
   //   margin-top: 1.5rem;
   margin-top: 2.5rem;
   font-size: 1.4rem;
   line-height: 1.8;
 }
-.detail {
+.body {
   display: grid;
   grid-template-columns: auto;
   gap: 2rem;
 }
-.detailDl {
+.bodyDl {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-.detailDt {
+.bodyDt {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.detailDd {
+.bodyDd {
   margin: 0;
   font-size: 1.4rem;
 }

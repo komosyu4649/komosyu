@@ -12,14 +12,14 @@ const SearchForm = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="10" cy="10" r="9" stroke="white" stroke-width="2" />
+        <circle cx="10" cy="10" r="9" stroke="white" strokeWidth="2" />
         <line
           x1="17.6827"
           y1="16.2693"
           x2="27.9123"
           y2="25.8273"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     </div>

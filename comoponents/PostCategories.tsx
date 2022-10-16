@@ -1,30 +1,17 @@
 import style from 'styles/PostCategories.module.scss'
+import { Posts } from 'type'
 
-const PostCategories = () => {
-  const categories = [
-    {
-      item: '書籍',
-    },
-    {
-      item: '技術',
-    },
-    {
-      item: 'YouTube',
-    },
-    {
-      item: 'Udemy',
-    },
-    {
-      item: 'コラム',
-    },
-  ]
+const PostCategories = ({ posts }: Posts) => {
+  const allCategories = posts.map((post) => post.frontMatter.category)
+  const categories = [...new Set(allCategories)]
+
   return (
     <div className={style.container}>
       <ul className={style.list}>
         {categories.map((category) => (
-          <li className={style.item} key={category.item}>
-            <a href={category.item} className={style.itemLink}>
-              {category.item}
+          <li className={style.item} key={category}>
+            <a href={category} className={style.itemLink}>
+              {category}
             </a>
           </li>
         ))}

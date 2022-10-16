@@ -15,7 +15,7 @@ interface Params extends ParsedUrlQuery {
   slug: string
 }
 
-const Post: NextPage<{
+const Posts: NextPage<{
   frontMatter: PostFrontMatter
   content: string
 }> = ({ frontMatter, content }) => {
@@ -52,4 +52,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export default Post
+export default Posts

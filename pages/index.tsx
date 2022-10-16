@@ -8,9 +8,10 @@ import matter from 'gray-matter'
 import { Posts } from 'type'
 
 const Home: NextPage<Posts> = ({ posts }) => {
+  // console.log(posts)
   return (
     <Layout>
-      <PostCategories />
+      <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
   )

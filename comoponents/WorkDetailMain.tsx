@@ -12,10 +12,10 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
     <article className={style.container}>
       <div className={style.inner}>
         {/* main */}
-        <div className={style.main}>
+        <div className={style.header}>
           {/* <div className={styleLayout.sm}> */}
           {/* img */}
-          <div className={`${style.mainImg} ${styleImg.default}`}>
+          <div className={`${style.headerImg} ${styleImg.default}`}>
             <Image
               src={workData.thumbnail}
               alt={workData.name}
@@ -24,12 +24,12 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
             />
           </div>
           {/* content */}
-          <div className={`${styleLayout.sm} ${style.mainContent}`}>
-            <h1 className={style.mainContentTitle}>
-              <span className={style.mainContentTitleName}>
+          <div className={`${styleLayout.sm} ${style.headerContent}`}>
+            <h1 className={style.headerContentTitle}>
+              <span className={style.headerContentTitleName}>
                 {workData.name}
               </span>
-              <span className={style.mainContentTitleType}>
+              <span className={style.headerContentTitleType}>
                 {workData.type}
               </span>
             </h1>
@@ -37,29 +37,29 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
               href={workData.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${styleText.link} ${style.mainContentUrl}`}
+              className={`${styleText.link} ${style.headerContentUrl}`}
             >
               {workData.url}
             </a>
-            <p className={style.mainContentDescription}>
+            <p className={style.headerContentDescription}>
               {workData.description}
             </p>
           </div>
           {/* </div> */}
         </div>
         {/* detail */}
-        <div className={`${styleLayout.sm} ${style.detail}`}>
-          <dl className={style.detailDl}>
-            <dt className={style.detailDt}>担当</dt>
-            <dd className={style.detailDd}>{workData.responsible}</dd>
+        <div className={`${styleLayout.sm} ${style.body}`}>
+          <dl className={style.bodyDl}>
+            <dt className={style.bodyDt}>担当</dt>
+            <dd className={style.bodyDd}>{workData.responsible}</dd>
           </dl>
-          <dl className={style.detailDl}>
-            <dt className={style.detailDt}>技術スタック</dt>
-            <dd className={style.detailDd}>{workData.technology}</dd>
+          <dl className={style.bodyDl}>
+            <dt className={style.bodyDt}>技術スタック</dt>
+            <dd className={style.bodyDd}>{workData.technology}</dd>
           </dl>
-          <dl className={style.detailDl}>
-            <dt className={style.detailDt}>開発について</dt>
-            <dd className={style.detailDd}>{workData.about}</dd>
+          <dl className={style.bodyDl}>
+            <dt className={style.bodyDt}>開発について</dt>
+            <dd className={style.bodyDd}>{workData.about}</dd>
           </dl>
         </div>
       </div>

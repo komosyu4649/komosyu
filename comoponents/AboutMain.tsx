@@ -7,31 +7,31 @@ import styleText from 'styles/CommonText.module.scss'
 const AboutMain = () => {
   const garellyImgs = [
     {
-      src: '/asset/img/common/komosyu.jpg',
+      src: '/asset/img/about/garelly_01.jpg',
     },
     {
-      src: '/asset/img/common/komosyu.jpg',
+      src: '/asset/img/about/garelly_02.jpg',
     },
     {
-      src: '/asset/img/common/komosyu.jpg',
+      src: '/asset/img/about/garelly_03.jpg',
     },
     {
-      src: '/asset/img/common/komosyu.jpg',
+      src: '/asset/img/about/garelly_04.jpg',
     },
   ]
 
   const links = [
     {
       name: '・github:',
-      link: 'https://github.com',
+      url: 'https://github.com',
     },
     {
       name: '・twitter:',
-      link: 'https://twitter.com',
+      url: 'https://twitter.com',
     },
     {
       name: '・website:',
-      link: 'https://twitter.com',
+      url: 'https://twitter.com',
     },
   ]
 
@@ -63,6 +63,7 @@ const AboutMain = () => {
               <ul className={style.mainPartContentGarellyList}>
                 {garellyImgs.map((garellyImg) => (
                   <li
+                    key={garellyImg.src}
                     className={`${styleImg.default}  ${style.mainPartContentGarellyItem}`}
                   >
                     <Image
@@ -83,19 +84,18 @@ const AboutMain = () => {
           <div className={style.mainPartContent}>
             <ul className={style.mainPartContentList}>
               {links.map((link) => (
-                <li className={style.mainPartContentItem}>
+                <li key={link.name} className={style.mainPartContentItem}>
                   <span className={style.mainPartContentItemName}>
                     {link.name} &nbsp;
                   </span>
-                  <Link href="">
-                    <a
-                      className={`${styleText.link} ${style.mainPartContentItemLink}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.link}
-                    </a>
-                  </Link>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styleText.link} ${style.mainPartContentItemLink}`}
+                  >
+                    {link.url}
+                  </a>
                 </li>
               ))}
             </ul>
