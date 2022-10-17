@@ -1,24 +1,35 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { PostContext } from 'type'
+import { Posts, Post, PostContext } from 'type'
 import Layout from 'comoponents/Layout'
 import PostsList from 'comoponents/PostsList'
 import PostCategories from 'comoponents/PostCategories'
-import { Posts } from 'type'
 
-const Category = ({
-  category,
-  posts,
-}: {
+// const Category: NextPage<{ category: string; posts: Post[] }> = ({
+//   category,
+//   posts,
+type Test = {
+  posts: [
+    {
+      frontMatter: {
+        title: string
+        date: string
+        description: string
+        category: string
+      }
+      slug: string
+    }
+  ]
   category: string
-  posts: PostContext[]
-}) => {
-  const filteredPosts = posts.filter(
+}
+const Category: NextPage<Test> = ({ posts, category }) => {
+  // console.log(8, posts)
+  const filteredPosts: FilteredPosts = posts.filter(
     (post) => post.frontMatter.category === category
   )
-  // console.log(filteredPosts)
-  // console.log(1, posts)
+  console.log(filteredPosts, posts)
+
   return (
     <Layout>
       <PostCategories posts={posts} />

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import style from 'styles/PostCategories.module.scss'
 import { Posts } from 'type'
 
@@ -11,9 +12,9 @@ const PostCategories = ({ posts }: Posts) => {
       <ul className={style.list}>
         {categories.map((category) => (
           <li className={style.item} key={category}>
-            <a href={`/posts/category/${category}`} className={style.itemLink}>
-              {category}
-            </a>
+            <Link href={`/posts/category/${category}`}>
+              <a className={style.itemLink}>{category}</a>
+            </Link>
           </li>
         ))}
       </ul>

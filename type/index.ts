@@ -12,6 +12,20 @@ export type Posts = {
   ]
 }
 
+export type FilteredPosts = {
+  filteredPosts: [
+    {
+      frontMatter: {
+        title: string
+        date: string
+        description: string
+        category: string
+      }
+      slug: string
+    }
+  ]
+}
+
 export type Post = {
   frontMatter: {
     title: string
