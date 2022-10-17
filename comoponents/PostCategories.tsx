@@ -2,6 +2,7 @@ import style from 'styles/PostCategories.module.scss'
 import { Posts } from 'type'
 
 const PostCategories = ({ posts }: Posts) => {
+  // console.log(2, posts)
   const allCategories = posts.map((post) => post.frontMatter.category)
   const categories = [...new Set(allCategories)]
 

@@ -4,6 +4,7 @@ import PostLoadMore from './PostLoadMore'
 import { Posts, Post } from 'type'
 
 const PostsList = ({ posts }: Posts) => {
+  // console.log(posts)
   return (
     <div className={style.container}>
       <ul className={style.list}>

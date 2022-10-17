@@ -2,9 +2,10 @@ import Image from 'next/image'
 import style from 'styles/WorksMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import Link from 'next/link'
-import { WorkDetail, Works } from 'type'
+import { WorkData, WorkDetail, Works } from 'type'
 
-const WorksMain = ({ works }: Works) => {
+const WorksMain = ({ works }: { works: WorkData[] }) => {
+  console.log(works)
   function widthLayout(index: number) {
     if (index % 11 === 3) {
       return '555'
@@ -30,24 +31,10 @@ const WorksMain = ({ works }: Works) => {
     }
   }
 
-  type Test = {
-    slug: string | null
-    workData: {
-      thumbnail: string | null
-      name: string | null
-      type: string | null
-      url: string | null
-      description: string | null
-      responsible: string | null
-      technology: string | null
-      about: string | null
-    }
-  }
-
   return (
     <div className={style.container}>
       <ul className={style.list}>
-        {works.map((work, index) =>
+        {works.map((work: WorkData, index: number) =>
           work.workData.thumbnail !== '' ? (
             <li className={style.item} key={index}>
               <Link href={`/works/detail/${work.slug}`}>

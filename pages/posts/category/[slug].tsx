@@ -1,31 +1,54 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { PostContext } from 'type'
+import Layout from 'comoponents/Layout'
+import PostsList from 'comoponents/PostsList'
+import PostCategories from 'comoponents/PostCategories'
+import { Posts } from 'type'
 
-const Category = ({ category, posts }) => {
-  // const Category = ({ category }) => {
-  console.log(category, posts)
-  return <div></div>
+const Category = ({
+  category,
+  posts,
+}: {
+  category: string
+  posts: PostContext[]
+}) => {
+  const filteredPosts = posts.filter(
+    (post) => post.frontMatter.category === category
+  )
+  // console.log(filteredPosts)
+  // console.log(1, posts)
+  return (
+    <Layout>
+      <PostCategories posts={posts} />
+      <PostsList posts={filteredPosts} />
+    </Layout>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async (params) => {
-  const category = params.params!
+  const category = params.params!.slug
   const files = fs.readdirSync('posts')
   /**
    * TODO: flatMapで綺麗に書き直したい
    */
-  let posts = files.map((fileName) => {
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, '')
     const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
     let { data } = matter(fileContent)
     return {
       frontMatter: data,
+      slug,
     }
   })
-  const filteredPosts = posts.filter(
-    (post) => post.frontMatter.category === category.slug
-  )
+  // console.log(posts)
   return {
-    props: { category: category, posts: filteredPosts },
+    // props: { category: category, posts: posts },
+    props: {
+      category,
+      posts,
+    },
   }
 }
 
