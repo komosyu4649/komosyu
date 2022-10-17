@@ -3,37 +3,29 @@ import fs from 'fs'
 import matter from 'gray-matter'
 
 const Category = ({ category, posts }) => {
-  //   console.log(category, posts)
+  // const Category = ({ category }) => {
+  console.log(category, posts)
   return <div></div>
 }
 
 export const getStaticProps: GetStaticProps = async (params) => {
   const category = params.params!
   const files = fs.readdirSync('posts')
-
+  /**
+   * TODO: flatMapで綺麗に書き直したい
+   */
   let posts = files.map((fileName) => {
     const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
-    let data = matter(fileContent)
-    console.log(data)
-    // const test = data
-    // if (data.category === category.slug) {
-    //   data
-    // }
-
-    // console.log(matter(fileContent).data.category)
-    // if (data.category === category.slug) {
-    //   data
-    // }
-    // if (data.category === category.slug) {
+    let { data } = matter(fileContent)
     return {
-      //   frontMatter: data.category === category.slug ? data : null,
       frontMatter: data,
     }
-    // }
   })
-  //   console.log(posts)
+  const filteredPosts = posts.filter(
+    (post) => post.frontMatter.category === category.slug
+  )
   return {
-    props: { category: category, posts: posts },
+    props: { category: category, posts: filteredPosts },
   }
 }
 

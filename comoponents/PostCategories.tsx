@@ -10,7 +10,7 @@ const PostCategories = ({ posts }: Posts) => {
       <ul className={style.list}>
         {categories.map((category) => (
           <li className={style.item} key={category}>
-            <a href={category} className={style.itemLink}>
+            <a href={`/posts/category/${category}`} className={style.itemLink}>
               {category}
             </a>
           </li>
