@@ -6,10 +6,7 @@ import Layout from 'comoponents/Layout'
 import PostsList from 'comoponents/PostsList'
 import PostCategories from 'comoponents/PostCategories'
 
-// const Category: NextPage<{ category: string; posts: Post[] }> = ({
-//   category,
-//   posts,
-type Test = {
+type CategoryProps = {
   posts: [
     {
       frontMatter: {
@@ -23,12 +20,11 @@ type Test = {
   ]
   category: string
 }
-const Category: NextPage<Test> = ({ posts, category }) => {
-  // console.log(8, posts)
-  const filteredPosts: FilteredPosts = posts.filter(
-    (post) => post.frontMatter.category === category
+
+const Category: NextPage<CategoryProps> = ({ posts, category }) => {
+  const filteredPosts = posts.flatMap((post) =>
+    post.frontMatter.category === category ? post : []
   )
-  console.log(filteredPosts, posts)
 
   return (
     <Layout>
@@ -44,7 +40,7 @@ export const getStaticProps: GetStaticProps = async (params) => {
   /**
    * TODO: flatMapで綺麗に書き直したい
    */
-  const posts = files.map((fileName) => {
+  let posts = files.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '')
     const fileContent = fs.readFileSync(`posts/${fileName}`, 'utf-8')
     let { data } = matter(fileContent)
@@ -53,9 +49,12 @@ export const getStaticProps: GetStaticProps = async (params) => {
       slug,
     }
   })
-  // console.log(posts)
+
+  posts = posts.sort((a, b) =>
+    new Date(a.frontMatter.date) > new Date(b.frontMatter.date) ? -1 : 1
+  )
+
   return {
-    // props: { category: category, posts: posts },
     props: {
       category,
       posts,
@@ -81,8 +80,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }))
   return {
     paths,
-    // fallback: 'blocking',
-    fallback: false,
+    fallback: 'blocking',
+    // fallback: false,
   }
 }
 

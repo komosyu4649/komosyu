@@ -3,11 +3,11 @@ import WorksMain from 'comoponents/WorksMain'
 import { GetStaticProps, NextPage } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { Works } from 'type'
+import { WorkData, Works } from 'type'
 
 const path = 'pages/works/detail/data'
 
-const Works: NextPage<Works> = ({ works }) => {
+const Works = ({ works }: { works: WorkData[] }) => {
   return (
     <Layout>
       <WorksMain works={works} />

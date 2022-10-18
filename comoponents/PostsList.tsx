@@ -3,7 +3,7 @@ import style from 'styles/PostsList.module.scss'
 import PostLoadMore from './PostLoadMore'
 import { Posts, Post } from 'type'
 
-const PostsList = ({ posts }: Posts) => {
+const PostsList = ({ posts }: { posts: Post[] }) => {
   // console.log(posts)
   return (
     <div className={style.container}>

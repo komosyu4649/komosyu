@@ -1,0 +1,7 @@
+@use 'variables' as var;
+
+.category {
+  color: var.$purple;
+  background-color: var.$white;
+  border: 2px solid var.$purple;
+}

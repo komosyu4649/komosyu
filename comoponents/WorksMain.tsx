@@ -4,8 +4,8 @@ import styleImg from 'styles/CommonImg.module.scss'
 import Link from 'next/link'
 import { WorkData, WorkDetail, Works } from 'type'
 
+// const WorksMain = ({ works }: { works: WorkData[] }) => {
 const WorksMain = ({ works }: { works: WorkData[] }) => {
-  console.log(works)
   function widthLayout(index: number) {
     if (index % 11 === 3) {
       return '555'
