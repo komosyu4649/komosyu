@@ -8,10 +8,8 @@ import { Posts } from 'type'
 const PostCategories = ({ posts }: Posts) => {
   const router = useRouter()
   const urlPath = router.asPath
-  // console.log(2, posts)
   const allCategories = posts.map((post) => post.frontMatter.category)
   const categories = [...new Set(allCategories)]
-  console.log(urlPath, categories)
 
   return (
     <div className={style.container}>

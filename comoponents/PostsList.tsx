@@ -4,15 +4,16 @@ import PostLoadMore from './PostLoadMore'
 import { Posts, Post } from 'type'
 
 const PostsList = ({ posts }: { posts: Post[] }) => {
-  // console.log(posts)
+  const postNum = 3
+
   return (
     <div className={style.container}>
       <ul className={style.list}>
-        {posts.map((post) => (
+        {posts.slice(0, postNum).map((post) => (
           <PostItem key={post.slug} post={post} />
         ))}
       </ul>
-      <PostLoadMore />
+      {posts.slice(0, postNum).length !== posts.length && <PostLoadMore />}
     </div>
   )
 }
