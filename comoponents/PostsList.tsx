@@ -7,6 +7,7 @@ import { useLoadMorePostsStore } from 'lib/store'
 const PostsList = ({ posts }: { posts: Post[] }) => {
   const store = useLoadMorePostsStore((state) => state)
   const loadNumberState = store.loadNumber
+  console.log(loadNumberState)
 
   return (
     <div className={style.container}>
