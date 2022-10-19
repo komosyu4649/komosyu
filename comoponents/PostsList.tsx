@@ -6,15 +6,15 @@ import { useLoadMorePostsStore } from 'lib/store'
 import { useState } from 'react'
 
 const PostsList = ({ posts }: { posts: Post[] }) => {
-  const loadPostNum = 3
+  // zustand
   // const store = useLoadMorePostsStore((state) => state)
   // const loadNumberState = store.loadNumber
-  // console.log(loadNumberState)
+  // useState でやる場合はカテゴリーごとに表示件数を管理できるようにしないといけない
+  const loadPostNum = 3
   const [loadNumberState, setLoadNumberState] = useState(loadPostNum)
   const handleClickMore = () => {
     setLoadNumberState((loadNumberState) => loadNumberState + loadPostNum)
   }
-  // console.log(loadNumberState)
 
   return (
     <div className={style.container}>
@@ -24,7 +24,9 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
         ))}
       </ul>
       {posts.slice(0, loadNumberState).length !== posts.length && (
+        // zustand
         // <PostLoadMore />
+        // useState
         <button className={style.button} onClick={() => handleClickMore()}>
           もっとみる
         </button>
