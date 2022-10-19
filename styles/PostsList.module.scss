@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 .container {
   margin-top: 4rem;
 }
@@ -14,3 +16,14 @@
 //   grid-template-columns: auto;
 //   gap: 1.5rem;
 // }
+
+.button {
+  width: 100%;
+  min-height: 6.5rem;
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var.$white;
+  border: 2px solid var.$white;
+  border-radius: 1.5rem;
+}
