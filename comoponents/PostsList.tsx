@@ -41,25 +41,35 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
 
   return (
     <div className={style.container}>
-      <button
-        className={`${style.switch} postSwitch`}
-        onClick={handlePostLayoutMode}
-      >
-        <span className={`${style.switchInside} postSwitchInside`}></span>
-      </button>
-      <ul className={`${style.list} postList`}>
-        {posts.slice(0, loadNumberState).map((post) => (
-          <PostItem key={post.slug} post={post} />
-        ))}
-      </ul>
-      {posts.slice(0, loadNumberState).length !== posts.length && (
-        // zustand
-        // <PostLoadMore />
-        // useState
-        <button className={style.button} onClick={() => handleClickMore()}>
-          もっとみる
+      <div className={style.ui}>
+        <button
+          className={`${style.uiSwitch} postSwitch`}
+          onClick={handlePostLayoutMode}
+        >
+          <span className={`${style.uiSwitchInside} postSwitchInside`}></span>
         </button>
-      )}
+        <span className={style.uiLength}>
+          <span className={style.uiLengthNumber}>{posts.length} posts</span>
+        </span>
+      </div>
+      <div className={style.main}>
+        <ul className={`${style.mainList} postList`}>
+          {posts.slice(0, loadNumberState).map((post) => (
+            <PostItem key={post.slug} post={post} />
+          ))}
+        </ul>
+        {posts.slice(0, loadNumberState).length !== posts.length && (
+          // zustand
+          // <PostLoadMore />
+          // useState
+          <button
+            className={style.mainButton}
+            onClick={() => handleClickMore()}
+          >
+            もっとみる
+          </button>
+        )}
+      </div>
     </div>
   )
 }

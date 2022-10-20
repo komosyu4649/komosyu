@@ -5,16 +5,18 @@ import { Post, Posts } from 'type'
 const PostItem = ({ post }: { post: Post }) => {
   return (
     <>
-      <li className={`${style.item} postItem`}>
+      <li className={`${style.mainItem} postItem`}>
         <Link href={`/posts/${post.slug}`}>
-          <a className={`${style.itemLink} postItemLink`}>
-            <span className={`${style.itemLinkCategory} postItemLinkCategory`}>
+          <a className={`${style.mainItemLink} postItemLink`}>
+            <span
+              className={`${style.mainItemLinkCategory} postItemLinkCategory`}
+            >
               {post.frontMatter.category}
             </span>
-            <p className={`${style.itemLinkTitle} postItemLinkTitle`}>
+            <p className={`${style.mainItemLinkTitle} postItemLinkTitle`}>
               {post.frontMatter.title}
             </p>
-            <time className={`${style.itemLinkTime} postItemLinkTime`}>
+            <time className={`${style.mainItemLinkTime} postItemLinkTime`}>
               {post.frontMatter.date}
             </time>
           </a>

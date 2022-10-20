@@ -1,17 +1,17 @@
 @use 'variables' as var;
 
-.item {
+.mainItem {
   background-color: var.$purple_week;
   //   border-radius: 2rem;
   border-radius: 1.5rem;
 }
-.itemLink {
+.mainItemLink {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 2rem;
 }
-.itemLinkCategory {
+.mainItemLinkCategory {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   border: 1px solid var.$white;
   border-radius: 1.5rem;
 }
-.itemLinkTitle {
+.mainItemLinkTitle {
   position: relative;
   margin: 2rem 0 2rem;
   padding-bottom: 3.5rem;
@@ -40,23 +40,23 @@
     background-color: var.$white;
   }
 }
-.itemLinkTime {
+.mainItemLinkTime {
   font-size: 1.2rem;
   //   font-weight: bold;
 }
 
 // row mode
 
-// .item {
+// .mainItem {
 //   background-color: var.$purple_week;
 //   border-radius: 1.5rem;
 // }
-// .itemLink {
+// .mainItemLink {
 //   position: relative;
 //   display: block;
 //   padding: 2rem 2rem 3rem;
 // }
-// .itemLinkCategory {
+// .mainItemLinkCategory {
 //   display: inline-flex;
 //   justify-content: center;
 //   align-items: center;
@@ -68,13 +68,13 @@
 //   border: 1px solid var.$white;
 //   border-radius: 1.5rem;
 // }
-// .itemLinkTitle {
+// .mainItemLinkTitle {
 //   // margin-top: 2rem;
 //   margin-top: 1.5rem;
 //   font-size: 1.6rem;
 //   font-weight: bold;
 // }
-// .itemLinkTime {
+// .mainItemLinkTime {
 //   position: absolute;
 //   top: 2rem;
 //   right: 2rem;
