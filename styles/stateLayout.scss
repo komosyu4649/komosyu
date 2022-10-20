@@ -1,0 +1,57 @@
+@use 'variables' as var;
+
+.is-layout__post {
+  .postSwitch {
+  }
+  .postSwitchInside {
+    transform: translateX(100%);
+    transition: transform 0.4s var.$easeInOut;
+  }
+  .postList {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.5rem;
+  }
+  .postItem {
+    background-color: var.$purple_week;
+    border-radius: 1.5rem;
+  }
+  .postItemLink {
+    position: relative;
+    display: block;
+    padding: 2rem 2rem 3rem;
+  }
+  .postItemLinkCategory {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.25rem 2.5rem;
+    font-size: 1.2rem;
+    //   font-weight: bold;
+    //   border: 2px solid var.$white;
+    border: 1px solid var.$white;
+    border-radius: 1.5rem;
+  }
+  .postItemLinkTitle {
+    // margin-top: 2rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    &::before {
+      content: none;
+    }
+  }
+  .postItemLinkTime {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+}
+.postSwitchInside {
+  transform: translateX(0%);
+  transition: transform 0.4s var.$easeInOut;
+}

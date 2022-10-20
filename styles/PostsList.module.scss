@@ -3,10 +3,25 @@
 .container {
   margin-top: 4rem;
 }
+.switch {
+  width: 4rem;
+  height: 1.75rem;
+  background-color: var.$white;
+  border: 2px solid var.$white;
+  border-radius: 5rem;
+}
+.switchInside {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: var.$purple;
+  border-radius: 5rem;
+}
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 // row mode
@@ -19,9 +34,9 @@
 
 .button {
   width: 100%;
-  min-height: 6.5rem;
+  min-height: 6rem;
   margin-top: 5rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var.$white;
   border: 2px solid var.$white;
