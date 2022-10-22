@@ -17,6 +17,11 @@ npx create-next-app コマンドを利用して Next.js プロジェクトの作
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
 
+```js[class="line-numbers"]
+import Layout from '../components/layout';
+import Layout from '../components/layout';
+```
+
 ### プロジェクトの作成
 
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。

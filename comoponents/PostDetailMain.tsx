@@ -17,7 +17,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
   const frontMatter = props.frontMatter
   const content = props.content
   const allContent = props.allContent
-  console.log(allContent)
+  // console.log(allContent)
 
   return (
     <article className={style.container}>

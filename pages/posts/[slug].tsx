@@ -11,6 +11,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
+import remarkPrism from 'remark-prism'
 
 type ContextProps = {
   frontMatter: { [key: string]: PostFrontMatter }
@@ -44,6 +45,9 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
 
   const result = await unified()
     .use(remarkParse)
+    .use(remarkPrism, {
+      plugins: ['line-numbers'],
+    })
     .use(remarkToc, {
       heading: '目次',
       tight: true,

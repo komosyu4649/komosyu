@@ -116,4 +116,9 @@
       padding: 1rem 3rem;
     }
   }
+
+  pre[class*='language-'] {
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
 }
