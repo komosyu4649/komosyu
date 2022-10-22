@@ -54,7 +54,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
   }
 
   // const toReactNode = (allContent: { allContent: JSX.Element }) => {
-  const toReactNode = (allContent: any) => {
+  const toReactNode = (allContent: JSX.Element) => {
     return unified()
       .use(rehypeParse, {
         fragment: true,
@@ -100,13 +100,14 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
               </time>
             </div>
             {/* category */}
-            <a
-              href=""
-              className={`${styleTag.sm} ${style.headerInformationCategory}`}
-              // className={`${styleTag.default} ${style.headerInformationCategory}`}
-            >
-              {frontMatter.category}
-            </a>
+            <Link href={`/posts/category/${frontMatter.category}`}>
+              <a
+                className={`${styleTag.sm} ${style.headerInformationCategory}`}
+                // className={`${styleTag.default} ${style.headerInformationCategory}`}
+              >
+                {frontMatter.category}
+              </a>
+            </Link>
           </div>
         </div>
       </div>

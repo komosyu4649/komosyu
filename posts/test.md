@@ -12,8 +12,10 @@ Next.js を使って Markdown のブログサイトの構築を一から行な�
 ## Next.js の準備
 
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
+
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
+
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
 npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
 
