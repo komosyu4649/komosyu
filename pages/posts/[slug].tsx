@@ -12,6 +12,9 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import remarkPrism from 'remark-prism'
+// import { createElement } from 'react'
+// import rehypeParse from 'rehype-parse'
+// import rehypeReact from 'rehype-react'
 
 type ContextProps = {
   frontMatter: { [key: string]: PostFrontMatter }
@@ -28,6 +31,14 @@ const Posts: NextPage<{
   allContent: JSX.Element
 }> = ({ frontMatter, content, allContent }) => {
   const props = { frontMatter, content, allContent }
+  // const toReactNode = (allContent) => {
+  //   return unified()
+  //     .use(rehypeParse)
+  //     .use(rehypeReact, {
+  //       createElement,
+  //     })
+  //     .processSync(allContent).result
+  // }
   return (
     <Layout>
       <PostDetailMain props={props} />
