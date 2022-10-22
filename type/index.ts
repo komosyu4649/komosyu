@@ -53,6 +53,7 @@ export type PostContext = {
     category: string
   }
   content: string
+  allContent: JSX.Element
 }
 
 export type Works = {

@@ -3,16 +3,22 @@ import React from 'react'
 import { PostContext } from 'type'
 import matter from 'gray-matter'
 import { marked } from 'marked'
+// import { unified } from 'unified'
+// import remarkToc from 'remark-toc'
+// import remarkParse from 'remark-parse'
+// import remarkRehype from 'remark-rehype'
+// import rehypeStringify from 'rehype-stringify'
 import style from 'styles/PostDetailMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import styleTag from 'styles/CommonTag.module.scss'
 import styleLayout from 'styles/CommonLayout.module.scss'
 
 const PostDetailMain = ({ props }: { props: PostContext }) => {
-  //   console.log(props.frontMatter)
   const frontMatter = props.frontMatter
   const content = props.content
-  //   console.log(frontMatter.title)
+  const allContent = props.allContent
+  console.log(allContent)
+
   return (
     <article className={style.container}>
       {/* header */}
@@ -57,7 +63,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
       {/* body */}
       <div
         className={`${styleLayout.sm} ${style.body}`}
-        dangerouslySetInnerHTML={{ __html: marked(content) }}
+        dangerouslySetInnerHTML={{ __html: marked(allContent) }}
       ></div>
     </article>
   )

@@ -71,7 +71,8 @@
   h4,
   h5,
   h6 {
-    margin: 4rem 0 2rem;
+    // margin: 4rem 0 2rem;
+    padding: 4rem 0 2rem;
     font-weight: bold;
   }
   h2 {
@@ -92,5 +93,27 @@
   p {
     font-size: 1.4rem;
     line-height: 2;
+  }
+  a {
+    font-size: 1.4rem;
+    line-height: 2;
+    background-image: linear-gradient(var.$white, var.$white);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: bottom;
+  }
+
+  // remarkTocでtocに特定のstyleを当てる方法が見つからなかったので、あんまり使わなそうなolで一時的に対応
+  ol {
+    padding: 3.5rem 5rem 1rem;
+    // padding: 4.5rem 6rem 2rem;
+    background-color: var.$purple_week;
+    border-radius: 1rem;
+    li {
+      list-style-type: disc;
+    }
+    ol {
+      padding: 1rem 3rem;
+    }
   }
 }
