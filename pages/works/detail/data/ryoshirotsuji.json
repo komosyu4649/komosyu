@@ -1,7 +1,9 @@
 {
+  "public": true,
   "thumbnail": "/asset/img/works/detail/ryoshirotsuji.jpg",
   "name": "ryoshiro tsuji",
-  "type": "webサイトの制作",
+  "type": "webサイト",
+  "date": "2022.07",
   "url": "https://www.ryoshiro-tsuji.com/",
   "description": "辻凌志朗の公式サイト。最新情報やメッセージなどをご紹介いたします。辻凌志朗の公式サイト。最新情報やメッセージなどをご紹介いたします。辻凌志朗の公式サイト。最新情報やメッセージなどをご紹介いたします。辻凌志朗の公式サイト。最新情報やメッセージなどをご紹介いたします。辻凌志朗の公式サイト。最新情報やメッセージなどをご紹介いたします。",
   "responsible": "ディレクション、デザイン、コーディング",

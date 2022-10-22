@@ -33,14 +33,19 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
                 {workData.type}
               </span>
             </h1>
-            <a
-              href={workData.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${styleText.link} ${style.headerContentUrl}`}
-            >
-              {workData.url}
-            </a>
+            <div className={style.headerContentDetail}>
+              <a
+                href={workData.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styleText.link} ${style.headerContentDetailUrl}`}
+              >
+                {workData.url}
+              </a>
+              <time className={style.headerContentDetailDate}>
+                {workData.date}
+              </time>
+            </div>
             <p className={style.headerContentDescription}>
               {workData.description}
             </p>

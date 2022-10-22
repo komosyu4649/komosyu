@@ -23,15 +23,15 @@ const AboutMain = () => {
   const links = [
     {
       name: '・github:',
-      url: 'https://github.com',
+      url: 'https://github.com/komosyu4649',
     },
     {
       name: '・twitter:',
-      url: 'https://twitter.com',
+      url: 'https://twitter.com/komosyu4649',
     },
     {
       name: '・website:',
-      url: 'https://twitter.com',
+      url: 'https://komosyu.com',
     },
   ]
 

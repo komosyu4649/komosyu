@@ -60,6 +60,7 @@ export type Works = {
   works: [
     slug: string,
     workData: {
+      public: boolean
       thumbnail: string
       name: string
       type: string
@@ -75,6 +76,7 @@ export type Works = {
 export type WorkData = {
   slug: string
   workData: {
+    public: boolean
     thumbnail: string
     name: string
     type: string
@@ -87,9 +89,11 @@ export type WorkData = {
 }
 
 export type WorkDetail = {
+  public: boolean
   thumbnail: string
   name: string
   type: string
+  date: string
   url: string
   description: string
   responsible: string

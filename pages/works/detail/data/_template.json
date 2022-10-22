@@ -1,7 +1,9 @@
 {
-  "thumbnail": "",
+  "public": false,
+  "thumbnail": "/asset/img/works/detail/.jpg",
   "name": "",
-  "type": "",
+  "type": "webサイト",
+  "date": "2022.0",
   "url": "",
   "description": "",
   "responsible": "",
