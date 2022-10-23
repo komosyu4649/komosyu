@@ -1,11 +1,18 @@
 // color
-// $purple: #111321;
-// $purple_week: #232432;
-// $white: #f8fcfd;
-// $white: #f7f7f7;
-$white: #eeeeee;
-$black: #151515;
-$black_week: #292929;
+// default
+$key: #111321;
+$key_week: #232432;
+$white: #ffffff;
+//
+// dark mode
+// $white: #ffffff;
+// $key: #151515;
+// $key_week: #292929;
+//
+// light mode
+// $white: #292929;
+// $key: #ffffff;
+// $key_week: #ecedef;
 
 // font
 $inter: 'Inter', sans-serif;
