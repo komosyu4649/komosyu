@@ -4,10 +4,12 @@ import { Posts } from 'type'
 import SearchMain from 'comoponents/SearchMain'
 import fs from 'fs'
 import matter from 'gray-matter'
+import Meta from 'comoponents/Head'
 
 const Search: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
+      <Meta title="" description="" />
       <SearchMain posts={posts} />
     </Layout>
   )

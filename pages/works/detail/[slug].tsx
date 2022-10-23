@@ -8,6 +8,7 @@ import fs from 'fs'
 import { WorkDetail } from 'type'
 import WorkDetailMain from 'comoponents/WorkDetailMain'
 import Layout from 'comoponents/Layout'
+import Meta from 'comoponents/Head'
 
 const path = 'pages/works/detail/data'
 
@@ -18,6 +19,7 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
 }) => {
   return (
     <Layout>
+      <Meta title="" description="" />
       <WorkDetailMain workData={workData} />
     </Layout>
   )

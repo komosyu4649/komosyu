@@ -51,7 +51,7 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
           <span className={`${style.uiSwitchInside} postSwitchInside`}></span>
         </button>
         <span className={`${styleFont.enBold} ${style.uiLength}`}>
-          <span className={style.uiLengthNumber}>{posts.length} </span>posts
+          <span className={style.uiLengthNumber}>[{posts.length}] </span>posts
         </span>
       </div>
       <div className={style.main}>

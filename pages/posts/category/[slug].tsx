@@ -5,6 +5,7 @@ import { Posts, Post, PostContext } from 'type'
 import Layout from 'comoponents/Layout'
 import PostsList from 'comoponents/PostsList'
 import PostCategories from 'comoponents/PostCategories'
+import Meta from 'comoponents/Head'
 
 type CategoryProps = {
   posts: [
@@ -28,6 +29,7 @@ const Category: NextPage<CategoryProps> = ({ posts, category }) => {
 
   return (
     <Layout>
+      <Meta title="" description="" />
       <PostCategories posts={posts} />
       <PostsList posts={filteredPosts} />
     </Layout>

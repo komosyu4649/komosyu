@@ -3,6 +3,7 @@ import Link from 'next/link'
 import style from 'styles/AboutMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import styleText from 'styles/CommonText.module.scss'
+import styleFont from 'styles/CommonFont.module.scss'
 
 const AboutMain = () => {
   const garellyImgs = [
@@ -37,11 +38,11 @@ const AboutMain = () => {
 
   return (
     <section className={style.container}>
-      <h1 className={style.title}>About me</h1>
+      <h1 className={`${styleFont.enBold} ${style.title}`}>About me</h1>
       <div className={style.main}>
         {/*  */}
         <div className={style.mainPart}>
-          <h2 className={style.mainPartTitle}>Bio</h2>
+          <h2 className={`${styleFont.enBold} ${style.mainPartTitle}`}>Bio</h2>
           <div className={style.mainPartContent}>
             <p className={style.mainPartContentText}>
               わたしはこういう感じの仕事をしている人です。
@@ -52,7 +53,9 @@ const AboutMain = () => {
         </div>
         {/*  */}
         <div className={style.mainPart}>
-          <h2 className={style.mainPartTitle}>Hobby</h2>
+          <h2 className={`${styleFont.enBold} ${style.mainPartTitle}`}>
+            Hobby
+          </h2>
           <div className={style.mainPartContent}>
             <p className={style.mainPartContentText}>
               趣味で写真を撮るのとか好きです。
@@ -80,19 +83,23 @@ const AboutMain = () => {
         </div>
         {/*  */}
         <div className={style.mainPart}>
-          <h2 className={style.mainPartTitle}>Links</h2>
+          <h2 className={`${styleFont.enBold} ${style.mainPartTitle}`}>
+            Links
+          </h2>
           <div className={style.mainPartContent}>
             <ul className={style.mainPartContentList}>
               {links.map((link) => (
                 <li key={link.name} className={style.mainPartContentItem}>
-                  <span className={style.mainPartContentItemName}>
+                  <span
+                    className={`${styleFont.en} ${style.mainPartContentItemName}`}
+                  >
                     {link.name} &nbsp;
                   </span>
                   <a
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${styleText.link} ${style.mainPartContentItemLink}`}
+                    className={`${styleFont.en} ${styleText.link} ${style.mainPartContentItemLink}`}
                   >
                     {link.url}
                   </a>

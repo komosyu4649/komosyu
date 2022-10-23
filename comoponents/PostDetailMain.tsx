@@ -98,14 +98,16 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
                 </span>
               </div>
               {/* time */}
-              <time className={style.headerInformationDetailTime}>
+              <time
+                className={`${styleFont.en} ${style.headerInformationDetailTime}`}
+              >
                 {frontMatter.date}
               </time>
             </div>
             {/* category */}
             <Link href={`/posts/category/${frontMatter.category}`}>
               <a
-                className={`${styleTag.sm} ${style.headerInformationCategory}`}
+                className={`${styleFont.en} ${styleTag.sm} ${style.headerInformationCategory}`}
                 // className={`${styleTag.default} ${style.headerInformationCategory}`}
               >
                 {frontMatter.category}

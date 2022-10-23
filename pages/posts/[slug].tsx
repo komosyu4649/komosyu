@@ -12,6 +12,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import remarkPrism from 'remark-prism'
+import Meta from 'comoponents/Head'
 // import { createElement } from 'react'
 // import rehypeParse from 'rehype-parse'
 // import rehypeReact from 'rehype-react'
@@ -41,6 +42,7 @@ const Posts: NextPage<{
   // }
   return (
     <Layout>
+      <Meta title="" description="" />
       <PostDetailMain props={props} />
     </Layout>
   )

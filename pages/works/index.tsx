@@ -4,12 +4,14 @@ import { GetStaticProps, NextPage } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { WorkData, Works } from 'type'
+import Meta from 'comoponents/Head'
 
 const path = 'pages/works/detail/data'
 
 const Works = ({ works }: { works: WorkData[] }) => {
   return (
     <Layout>
+      <Meta title="" description="" />
       <WorksMain works={works} />
     </Layout>
   )
