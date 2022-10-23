@@ -16,6 +16,7 @@ import style from 'styles/PostDetailMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import styleTag from 'styles/CommonTag.module.scss'
 import styleLayout from 'styles/CommonLayout.module.scss'
+import styleFont from 'styles/CommonFont.module.scss'
 import Link from 'next/link'
 import { ReactElement } from 'rehype-react/lib'
 // import CustomLink from './CustomLink'
@@ -74,7 +75,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
       {/* header */}
       <div className={style.header}>
         <div className={styleLayout.sm}>
-          <h1 className={style.headerTitle}>{frontMatter.title}</h1>
+          <h1 className={`${style.headerTitle}`}>{frontMatter.title}</h1>
           <div className={style.headerInformation}>
             {/* detail */}
             <div className={style.headerInformationDetail}>
@@ -90,7 +91,9 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
                     objectFit="cover"
                   />
                 </span>
-                <span className={style.headerInformationDetailPersonName}>
+                <span
+                  className={`${styleFont.en} ${style.headerInformationDetailPersonName}`}
+                >
                   komosyu
                 </span>
               </div>

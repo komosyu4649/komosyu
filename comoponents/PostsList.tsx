@@ -1,6 +1,7 @@
 import PostItem from './PostItem'
 import style from 'styles/PostsList.module.scss'
 import styleButton from 'styles/CommonButton.module.scss'
+import styleFont from 'styles/CommonFont.module.scss'
 import PostLoadMore from './PostLoadMore'
 import { Posts, Post } from 'type'
 import { useLoadMorePostsStore } from 'lib/store'
@@ -49,8 +50,8 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
         >
           <span className={`${style.uiSwitchInside} postSwitchInside`}></span>
         </button>
-        <span className={style.uiLength}>
-          <span className={style.uiLengthNumber}>{posts.length} posts</span>
+        <span className={`${styleFont.enBold} ${style.uiLength}`}>
+          <span className={style.uiLengthNumber}>{posts.length} </span>posts
         </span>
       </div>
       <div className={style.main}>

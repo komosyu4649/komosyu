@@ -1,0 +1,9 @@
+@use 'variables' as var;
+
+.en {
+  font-family: var.$heebo;
+}
+.enBold {
+  font-family: var.$heebo;
+  font-weight: 700;
+}

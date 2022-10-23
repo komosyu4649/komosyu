@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import style from 'styles/PostItem.module.scss'
+import styleFont from 'styles/CommonFont.module.scss'
 import { Post, Posts } from 'type'
 
 const PostItem = ({ post }: { post: Post }) => {
@@ -9,14 +10,16 @@ const PostItem = ({ post }: { post: Post }) => {
         <Link href={`/posts/${post.slug}`}>
           <a className={`${style.mainItemLink} postItemLink`}>
             <span
-              className={`${style.mainItemLinkCategory} postItemLinkCategory`}
+              className={`${styleFont.en} ${style.mainItemLinkCategory} postItemLinkCategory`}
             >
               {post.frontMatter.category}
             </span>
             <p className={`${style.mainItemLinkTitle} postItemLinkTitle`}>
               {post.frontMatter.title}
             </p>
-            <time className={`${style.mainItemLinkTime} postItemLinkTime`}>
+            <time
+              className={`${styleFont.en} ${style.mainItemLinkTime} postItemLinkTime`}
+            >
               {post.frontMatter.date}
             </time>
           </a>

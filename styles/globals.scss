@@ -4,8 +4,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var.$notosansjp;
   background-color: var.$purple;
   color: var.$white;
 }
@@ -29,4 +30,14 @@ a {
 #wrapper {
   width: 84rem;
   margin-inline: auto;
+}
+
+@media screen and (max-width: var.$sp) {
+  html {
+    font-size: 2.4155vw;
+  }
+  #wrapper {
+    width: 36rem;
+    margin-inline: auto;
+  }
 }

@@ -6,10 +6,12 @@ import styles from '../styles/Home.module.scss'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { Posts } from 'type'
+import Meta from 'comoponents/Head'
 
 const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
+      <Meta title="" description="" />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
