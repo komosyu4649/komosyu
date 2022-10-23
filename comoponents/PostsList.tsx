@@ -1,5 +1,6 @@
 import PostItem from './PostItem'
 import style from 'styles/PostsList.module.scss'
+import styleButton from 'styles/CommonButton.module.scss'
 import PostLoadMore from './PostLoadMore'
 import { Posts, Post } from 'type'
 import { useLoadMorePostsStore } from 'lib/store'
@@ -63,7 +64,7 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
           // <PostLoadMore />
           // useState
           <button
-            className={style.mainButton}
+            className={`${styleButton.lg} ${style.mainButton}`}
             onClick={() => handleClickMore()}
           >
             もっとみる

@@ -36,7 +36,7 @@ const AboutMain = () => {
   ]
 
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <h1 className={style.title}>About me</h1>
       <div className={style.main}>
         {/*  */}
@@ -103,7 +103,7 @@ const AboutMain = () => {
         </div>
         {/*  */}
       </div>
-    </div>
+    </section>
   )
 }
 

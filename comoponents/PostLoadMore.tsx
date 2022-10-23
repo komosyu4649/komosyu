@@ -1,6 +1,7 @@
 import { useLoadMorePostsStore } from 'lib/store'
 import { useState } from 'react'
 import style from 'styles/PostLoadMore.module.scss'
+import styleButton from 'styles/styleButton.module.scss'
 
 const PostLoadMore = () => {
   const loadPostNum = 3
@@ -10,7 +11,10 @@ const PostLoadMore = () => {
   }
 
   return (
-    <button className={style.button} onClick={() => handleClickMore()}>
+    <button
+      className={`${styleButton.lg} ${style.button}`}
+      onClick={() => handleClickMore()}
+    >
       もっとみる
     </button>
   )
