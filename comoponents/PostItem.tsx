@@ -20,7 +20,9 @@ const PostItem = ({ post }: { post: Post }) => {
             <time
               className={`${styleFont.en} ${style.mainItemLinkTime} postItemLinkTime`}
             >
-              {post.frontMatter.date}
+              {post.frontMatter.modifiedDate
+                ? post.frontMatter.modifiedDate
+                : post.frontMatter.publishedDate}
             </time>
           </a>
         </Link>

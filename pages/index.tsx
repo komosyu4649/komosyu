@@ -7,11 +7,12 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { Posts } from 'type'
 import Meta from 'comoponents/Head'
+import { NextSeo } from 'next-seo'
 
 const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <Meta title="" description="" />
+      <NextSeo title="top title" description="top description" />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
@@ -31,7 +32,18 @@ export const getStaticProps: GetStaticProps = async () => {
   })
 
   posts = posts.sort((a, b) =>
-    new Date(a.frontMatter.date) > new Date(b.frontMatter.date) ? -1 : 1
+    new Date(
+      a.frontMatter.modifiedDate
+        ? a.frontMatter.modifiedDate
+        : a.frontMatter.publishedDate
+    ) >
+    new Date(
+      b.frontMatter.modifiedDate
+        ? b.frontMatter.modifiedDate
+        : b.frontMatter.publishedDate
+    )
+      ? -1
+      : 1
   )
 
   return {

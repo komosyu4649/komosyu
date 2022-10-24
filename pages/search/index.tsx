@@ -5,11 +5,12 @@ import SearchMain from 'comoponents/SearchMain'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Meta from 'comoponents/Head'
+import { NextSeo } from 'next-seo'
 
 const Search: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <Meta title="" description="" />
+      <NextSeo title="" description="" />
       <SearchMain posts={posts} />
     </Layout>
   )
@@ -28,7 +29,18 @@ export const getStaticProps: GetStaticProps = async () => {
   })
 
   posts = posts.sort((a, b) =>
-    new Date(a.frontMatter.date) > new Date(b.frontMatter.date) ? -1 : 1
+    new Date(
+      a.frontMatter.modifiedDate
+        ? a.frontMatter.modifiedDate
+        : a.frontMatter.publishedDate
+    ) >
+    new Date(
+      b.frontMatter.modifiedDate
+        ? b.frontMatter.modifiedDate
+        : b.frontMatter.publishedDate
+    )
+      ? -1
+      : 1
   )
 
   return {

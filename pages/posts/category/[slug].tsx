@@ -6,13 +6,15 @@ import Layout from 'comoponents/Layout'
 import PostsList from 'comoponents/PostsList'
 import PostCategories from 'comoponents/PostCategories'
 import Meta from 'comoponents/Head'
+import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 type CategoryProps = {
   posts: [
     {
       frontMatter: {
         title: string
-        date: string
+        publishedDate: string
+        modifiedDate: string
         description: string
         category: string
       }
@@ -27,9 +29,12 @@ const Category: NextPage<CategoryProps> = ({ posts, category }) => {
     post.frontMatter.category === category ? post : []
   )
 
+  console.log(filteredPosts)
+
   return (
     <Layout>
-      <Meta title="" description="" />
+      {/* <Meta title="" description="" /> */}
+      <NextSeo title="" description="" />
       <PostCategories posts={posts} />
       <PostsList posts={filteredPosts} />
     </Layout>
@@ -53,7 +58,18 @@ export const getStaticProps: GetStaticProps = async (params) => {
   })
 
   posts = posts.sort((a, b) =>
-    new Date(a.frontMatter.date) > new Date(b.frontMatter.date) ? -1 : 1
+    new Date(
+      a.frontMatter.modifiedDate
+        ? a.frontMatter.modifiedDate
+        : a.frontMatter.publishedDate
+    ) >
+    new Date(
+      b.frontMatter.modifiedDate
+        ? b.frontMatter.modifiedDate
+        : b.frontMatter.publishedDate
+    )
+      ? -1
+      : 1
   )
 
   return {

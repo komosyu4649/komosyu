@@ -9,6 +9,7 @@ import { WorkDetail } from 'type'
 import WorkDetailMain from 'comoponents/WorkDetailMain'
 import Layout from 'comoponents/Layout'
 import Meta from 'comoponents/Head'
+import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 const path = 'pages/works/detail/data'
 
@@ -17,9 +18,19 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
 }: {
   workData: WorkDetail
 }) => {
+  console.log(workData)
   return (
     <Layout>
-      <Meta title="" description="" />
+      <NextSeo title={workData.name} description={workData.description} />
+      <ArticleJsonLd
+        type="Blog"
+        url="https://komosyu.com/"
+        title={workData.name}
+        images={[]}
+        datePublished={workData.date}
+        authorName="komosyu"
+        description={workData.description}
+      />
       <WorkDetailMain workData={workData} />
     </Layout>
   )

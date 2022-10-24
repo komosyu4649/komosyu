@@ -3,7 +3,8 @@ export type Posts = {
     {
       frontMatter: {
         title: string
-        date: string
+        publishedDate: string
+        modifiedDate: string
         description: string
         category: string
       }
@@ -17,7 +18,8 @@ export type FilteredPosts = {
     {
       frontMatter: {
         title: string
-        date: string
+        publishedDate: string
+        modifiedDate: string
         description: string
         category: string
       }
@@ -29,7 +31,8 @@ export type FilteredPosts = {
 export type Post = {
   frontMatter: {
     title: string
-    date: string
+    publishedDate: string
+    modifiedDate: string
     description: string
     category: string
   }
@@ -39,7 +42,8 @@ export type Post = {
 export type PostFrontMatter = {
   // frontMatter: {
   title: string
-  date: string
+  publishedDate: string
+  modifiedDate: string
   description: string
   category: string
   // }
@@ -48,7 +52,8 @@ export type PostFrontMatter = {
 export type PostContext = {
   frontMatter: {
     title: string
-    date: string
+    publishedDate: string
+    modifiedDate: string
     description: string
     category: string
   }

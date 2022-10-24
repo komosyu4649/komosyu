@@ -16,6 +16,7 @@ import Meta from 'comoponents/Head'
 // import { createElement } from 'react'
 // import rehypeParse from 'rehype-parse'
 // import rehypeReact from 'rehype-react'
+import { NextSeo, ArticleJsonLd } from 'next-seo'
 
 type ContextProps = {
   frontMatter: { [key: string]: PostFrontMatter }
@@ -32,6 +33,7 @@ const Posts: NextPage<{
   allContent: JSX.Element
 }> = ({ frontMatter, content, allContent }) => {
   const props = { frontMatter, content, allContent }
+  // console.log(props)
   // const toReactNode = (allContent) => {
   //   return unified()
   //     .use(rehypeParse)
@@ -42,7 +44,20 @@ const Posts: NextPage<{
   // }
   return (
     <Layout>
-      <Meta title="" description="" />
+      <NextSeo
+        title={props.frontMatter.title}
+        description={props.frontMatter.description}
+      />
+      <ArticleJsonLd
+        type="Blog"
+        url="https://komosyu.com/"
+        title={props.frontMatter.title}
+        images={[]}
+        datePublished={props.frontMatter.publishedDate}
+        dateModified={props.frontMatter.modifiedDate}
+        authorName="komosyu"
+        description={props.frontMatter.description}
+      />
       <PostDetailMain props={props} />
     </Layout>
   )
