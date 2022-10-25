@@ -21,3 +21,12 @@
   // font-weight: bold;
   border-radius: 2.5rem;
 }
+
+@media screen and (max-width: var.$sp) {
+  .container {
+    margin-top: 5rem;
+  }
+  .list {
+    gap: 1.5rem;
+  }
+}

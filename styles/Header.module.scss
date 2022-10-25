@@ -31,3 +31,44 @@
   // font-size: 1.6rem;
   // font-weight: bold;
 }
+
+@media screen and (max-width: var.$sp) {
+  .inner {
+    padding: 2rem 0;
+  }
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var.$white;
+  }
+  .navList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  }
+  .navItem {
+    &:last-child {
+      .navItemLink {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+  .navItemLink {
+    position: relative;
+    width: 100%;
+    color: var.$key;
+    text-align: center;
+    &::before {
+      position: absolute;
+      top: calc(50% - 0.5rem);
+      right: 0;
+      content: '';
+      width: 1px;
+      height: 1rem;
+      background-color: var.$key;
+    }
+  }
+}

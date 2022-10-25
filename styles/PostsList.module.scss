@@ -54,3 +54,12 @@
   // border: 2px solid var.$white;
   // border-radius: 1.5rem;
 }
+
+@media screen and (max-width: var.$sp) {
+  .uiLength {
+    font-size: 1.4rem;
+  }
+  .mainButton {
+    margin-top: 2.5rem;
+  }
+}
