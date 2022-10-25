@@ -5,10 +5,11 @@ import styleTag from 'styles/CommonTag.module.scss'
 import styleCurrent from 'styles/StateCurrent.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
 import { Posts } from 'type'
+import useCurrent from 'hook/useCurrent'
 
 const PostCategories = ({ posts }: Posts) => {
-  const router = useRouter()
-  const urlPath = router.asPath
+  const { urlPath } = useCurrent()
+
   const allCategories = posts.map((post) => post.frontMatter.category)
   const categories = [...new Set(allCategories)]
 

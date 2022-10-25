@@ -18,7 +18,6 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
 }: {
   workData: WorkDetail
 }) => {
-  console.log(workData)
   return (
     <Layout>
       <NextSeo title={workData.name} description={workData.description} />
