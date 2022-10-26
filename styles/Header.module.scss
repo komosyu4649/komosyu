@@ -50,7 +50,7 @@
   .navItem {
     &:last-child {
       .navItemLink {
-        &::before {
+        &::after {
           content: none;
         }
       }
@@ -61,7 +61,7 @@
     width: 100%;
     color: var.$key;
     text-align: center;
-    &::before {
+    &::after {
       position: absolute;
       top: calc(50% - 0.5rem);
       right: 0;

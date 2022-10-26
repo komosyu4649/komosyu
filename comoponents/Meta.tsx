@@ -5,10 +5,11 @@ type Props = {
   description: string
 }
 
-const Meta = ({ title, description }: Props) => {
+// const Meta = ({ title, description }: Props) => {
+const Meta = () => {
   return (
     <Head>
-      <title>{title} | komosyu blog</title>
+      {/* <title>{title} | komosyu blog</title>
       <meta name="description" content={description} />
       <link
         rel="apple-touch-icon"
@@ -49,7 +50,7 @@ const Meta = ({ title, description }: Props) => {
       <meta
         name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0"
-      />
+      /> */}
       {/* lato */}
       {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

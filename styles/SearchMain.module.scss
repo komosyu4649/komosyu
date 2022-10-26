@@ -25,3 +25,17 @@
   right: 2.5rem;
   width: 2.5rem;
 }
+
+@media screen and (max-width: var.$sp) {
+  .form {
+    margin-top: 5rem;
+  }
+  .formInput {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+  .formIcon {
+    right: 2rem;
+    width: 2rem;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "public": true,
+  "thumbnail": "/asset/img/works/detail/wanion.jpg",
+  "name": "wanion",
+  "type": "webサービス",
+  "date": "2022.09",
+  "url": "https://wanion-anvd.vercel.app/",
+  "description": "next.jsではじめてwebサービスを作ってみました。",
+  "responsible": "ディレクション、デザイン、コーディング",
+  "technology": "Next.js, prisma, planetscale, tailwind.css, figma",
+  "about": "webサービス自体作るのがはじめてで、とりあえずnext.jsで簡単に試せそうで今風のprismaとplanetscaleを使ってのcrud操作などを作る経験ができてよかった。"
+}

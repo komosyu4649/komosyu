@@ -5,7 +5,7 @@ import { Posts, Post, PostContext } from 'type'
 import Layout from 'comoponents/Layout'
 import PostsList from 'comoponents/PostsList'
 import PostCategories from 'comoponents/PostCategories'
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 type CategoryProps = {

@@ -4,7 +4,7 @@ import { GetStaticProps, NextPage } from 'next'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { WorkData, Works } from 'type'
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import { NextSeo } from 'next-seo'
 
 const path = 'pages/works/detail/data'

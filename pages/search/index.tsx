@@ -4,7 +4,7 @@ import { Posts } from 'type'
 import SearchMain from 'comoponents/SearchMain'
 import fs from 'fs'
 import matter from 'gray-matter'
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import { NextSeo } from 'next-seo'
 
 const Search: NextPage<Posts> = ({ posts }) => {

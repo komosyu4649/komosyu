@@ -8,7 +8,7 @@ import fs from 'fs'
 import { WorkDetail } from 'type'
 import WorkDetailMain from 'comoponents/WorkDetailMain'
 import Layout from 'comoponents/Layout'
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 const path = 'pages/works/detail/data'

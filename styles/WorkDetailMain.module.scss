@@ -74,13 +74,15 @@
 .headerContentDescription {
   //   margin-top: 1.5rem;
   margin-top: 2.5rem;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 .body {
   display: grid;
   grid-template-columns: auto;
-  gap: 2rem;
+  // gap: 2rem;
+  gap: 3rem;
 }
 .bodyDl {
   display: flex;
@@ -88,10 +90,49 @@
   gap: 0.75rem;
 }
 .bodyDt {
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 .bodyDd {
   margin: 0;
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+@media screen and (max-width: var.$sp) {
+  .container {
+    margin-top: 5rem;
+  }
+  .header {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+  .headerImg {
+    height: 24rem;
+  }
+  .headerContent {
+    margin-top: 2rem;
+  }
+  .headerContentTitle {
+    font-size: 2rem;
+  }
+  .headerContentTitleName {
+    margin-right: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .headerContentDescription {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+  .body {
+    gap: 2rem;
+  }
+  .bodyDt {
+    font-size: 1.6rem;
+  }
+  .bodyDd {
+    font-size: 1.4rem;
+  }
 }

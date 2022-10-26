@@ -3,10 +3,16 @@ import style from 'styles/WorksMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import Link from 'next/link'
 import { WorkData, WorkDetail, Works } from 'type'
+import { useEffect, useState } from 'react'
 
 // const WorksMain = ({ works }: { works: WorkData[] }) => {
 const WorksMain = ({ works }: { works: WorkData[] }) => {
   const publicPosts = works.filter((work) => work.workData.public)
+  const [responsive, setResponsive] = useState(false)
+
+  useEffect(() => {
+    setResponsive(window.innerWidth > 768)
+  }, [])
 
   function widthLayout(index: number) {
     if (index % 11 === 3) {
@@ -47,8 +53,8 @@ const WorksMain = ({ works }: { works: WorkData[] }) => {
                       alt=""
                       layout="responsive"
                       objectFit="cover"
-                      width={widthLayout(index)}
-                      height={heightLayout(index)}
+                      width={responsive ? widthLayout(index) : 270}
+                      height={responsive ? heightLayout(index) : 200}
                     />
                   </div>
                   <div className={style.itemLinkContent}>

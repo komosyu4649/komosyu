@@ -1,4 +1,13 @@
+@use 'variables' as var;
+
 .sm {
   width: 68rem;
   margin-inline: auto;
+}
+
+@media screen and (max-width: var.$sp) {
+  .sm {
+    // width: 100%;
+    width: 32.5rem;
+  }
 }

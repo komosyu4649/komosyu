@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 .container {
   padding: 12rem 0 4rem;
   text-align: center;
@@ -5,4 +7,11 @@
 .small {
   font-size: 1.2rem;
   opacity: 0.6;
+}
+
+@media screen and (max-width: var.$sp) {
+  .container {
+    padding: 6rem 0 8rem;
+    text-align: center;
+  }
 }

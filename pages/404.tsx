@@ -1,4 +1,4 @@
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import Layout from 'comoponents/Layout'
 import NotFoundMain from 'comoponents/NotFoundMain'
 import { NextSeo } from 'next-seo'

@@ -5,7 +5,8 @@
 }
 .header {
   position: relative;
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
+  margin-bottom: 3rem;
   padding-bottom: 5rem;
   &::before {
     position: absolute;
@@ -25,6 +26,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin-top: 3rem;
 }
 .headerInformationDetail {
@@ -71,10 +73,7 @@
   h4,
   h5,
   h6 {
-    // margin: 4rem 0 2rem;
     padding: 4rem 0 2rem;
-    // margin-top: 4rem;
-    // margin: 4rem 0 2rem;
     font-weight: bold;
   }
   h2 {
@@ -101,11 +100,13 @@
   }
   p {
     margin-top: 1.5rem;
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2;
   }
   a {
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2;
     background-image: linear-gradient(var.$white, var.$white);
     background-repeat: no-repeat;
@@ -137,7 +138,97 @@
   pre[class*='language-'] {
     margin-top: 1.5rem;
     padding: 2rem;
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
+    font-size: 1.6rem;
     border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: var.$sp) {
+  .container {
+    margin-top: 5rem;
+  }
+  .header {
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+  }
+  .headerTitle {
+    font-size: 2.8rem;
+  }
+  .headerInformation {
+    margin-top: 2rem;
+  }
+  .headerInformationDetailPerson {
+    margin-right: 1rem;
+    padding-right: 1rem;
+  }
+  .headerInformationDetailPersonName {
+    font-size: 1.2rem;
+  }
+  .headerInformationDetailTime {
+    font-size: 1.2rem;
+  }
+
+  .body {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 3rem 0 1.5rem;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 2.2rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.8rem;
+    }
+    h5 {
+      font-size: 1.6rem;
+    }
+    h6 {
+      font-size: 1.4rem;
+    }
+    h2 + p,
+    h3 + p,
+    h4 + p,
+    h5 + p,
+    h6 + p {
+      margin-top: 0;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+    }
+    a {
+      font-size: 1.4rem;
+    }
+    ul {
+      margin-top: 1.5rem;
+      li {
+        margin: 0.5rem 0;
+      }
+    }
+
+    // remarkTocでtocに特定のstyleを当てる方法が見つからなかったので、あんまり使わなそうなolで一時的に対応
+    ol {
+      padding: 2.5rem 4rem 0.5rem;
+      li {
+        list-style-type: disc;
+      }
+      ol {
+        padding: 0.5rem 1.5rem;
+      }
+    }
+
+    pre[class*='language-'] {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      font-size: 1.4rem;
+    }
   }
 }

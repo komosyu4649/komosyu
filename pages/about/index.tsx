@@ -1,5 +1,5 @@
 import AboutMain from 'comoponents/AboutMain'
-import Meta from 'comoponents/Head'
+import Meta from 'comoponents/Meta'
 import Layout from 'comoponents/Layout'
 import { NextSeo, SocialProfileJsonLd } from 'next-seo'
 import React from 'react'

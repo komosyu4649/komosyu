@@ -20,3 +20,13 @@
     background-color: var.$white;
   }
 }
+
+@media screen and (max-width: var.$sp) {
+  .point {
+    &::before {
+      top: 1rem;
+      left: calc(50% - 0.25rem);
+      background-color: var.$key;
+    }
+  }
+}

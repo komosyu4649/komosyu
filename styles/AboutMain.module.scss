@@ -4,12 +4,18 @@
   margin-top: 10rem;
 }
 .title {
+  margin-bottom: 6rem;
   font-size: 3.2rem;
   font-weight: bold;
 }
+.main {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 4rem;
+}
 .mainPart {
   // margin-top: 6.5rem;
-  margin-top: 6rem;
+  // margin-top: 6rem;
 }
 .mainPartTitle {
   // margin-bottom: 2rem;
@@ -44,4 +50,32 @@
   font-size: 1.6rem;
 }
 .mainPartContentItemLink {
+}
+
+@media screen and (max-width: var.$sp) {
+  .container {
+    margin-top: 5rem;
+  }
+  .title {
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+  }
+  .main {
+    gap: 3.5rem;
+  }
+  .mainPartTitle {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .mainPartContentText {
+    font-size: 1.4rem;
+  }
+  .mainPartContentGarellyList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    height: 30rem;
+  }
+  .mainPartContentItemLink {
+    font-size: 1.4rem;
+  }
 }
