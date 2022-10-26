@@ -20,6 +20,7 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
             <Image
               src={workData.thumbnail}
               alt={workData.name}
+              quality="50"
               layout="fill"
               objectFit="cover"
             />

@@ -27,8 +27,8 @@
   overflow: hidden;
 }
 .headerContent {
-  margin-top: 4rem;
-  //   margin-top: 2.5rem;
+  // margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 .headerContentTitle {
   margin-bottom: 1rem;
@@ -37,15 +37,19 @@
 }
 .headerContentTitleName {
   position: relative;
-  margin-right: 3rem;
-  padding-right: 3rem;
+  // margin-right: 3rem;
+  // padding-right: 3rem;
+  margin-right: 2rem;
+  padding-right: 2rem;
   &::before {
     position: absolute;
-    top: 0;
+    // top: 0;
+    top: 25%;
     right: 0;
     content: '';
     width: 2px;
-    height: 100%;
+    // height: 100%;
+    height: 50%;
     background-color: var.$white;
   }
 }

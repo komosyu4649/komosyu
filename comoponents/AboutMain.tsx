@@ -72,6 +72,7 @@ const AboutMain = () => {
                     <Image
                       src={garellyImg.src}
                       alt=""
+                      quality="50"
                       layout="fill"
                       objectFit="cover"
                     />

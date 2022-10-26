@@ -87,6 +87,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
                   <Image
                     src="/asset/img/common/komosyu.jpg"
                     alt=""
+                    quality="50"
                     layout="fill"
                     objectFit="cover"
                   />

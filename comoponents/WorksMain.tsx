@@ -53,6 +53,7 @@ const WorksMain = ({ works }: { works: WorkData[] }) => {
                       alt=""
                       layout="responsive"
                       objectFit="cover"
+                      quality="50"
                       width={responsive ? widthLayout(index) : 270}
                       height={responsive ? heightLayout(index) : 200}
                     />

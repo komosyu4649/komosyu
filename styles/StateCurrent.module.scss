@@ -11,7 +11,8 @@
   position: relative;
   &::before {
     position: absolute;
-    top: 2rem;
+    // top: 2rem;
+    top: calc(50% - 1.5rem);
     left: 1rem;
     content: '';
     width: 0.5rem;

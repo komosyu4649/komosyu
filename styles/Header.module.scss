@@ -11,10 +11,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 12rem;
   margin: 0 -2rem;
-  padding: 4rem 0;
+  // padding: 4rem 0;
 }
 .logo {
+  display: flex;
+  align-items: center;
   padding: 2rem;
   // font-size: 2rem;
   font-size: 1.8rem;
@@ -23,9 +26,14 @@
 .navList {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 .navItemLink {
-  display: inline-block;
+  // display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   padding: 2rem;
   font-size: 1.4rem;
   // font-size: 1.6rem;
@@ -34,7 +42,8 @@
 
 @media screen and (max-width: var.$sp) {
   .inner {
-    padding: 2rem 0;
+    height: 10rem;
+    // padding: 2rem 0;
   }
   .nav {
     position: fixed;
