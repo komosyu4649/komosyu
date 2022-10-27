@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import style from 'styles/WorksMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 import Link from 'next/link'
 import { WorkData, WorkDetail, Works } from 'type'
 import { useEffect, useState } from 'react'
@@ -51,6 +52,7 @@ const WorksMain = ({ works }: { works: WorkData[] }) => {
                     <Image
                       src={work.workData.thumbnail}
                       alt=""
+                      className={`${styleHover.scaleMd}`}
                       layout="responsive"
                       objectFit="cover"
                       quality="50"

@@ -1,0 +1,41 @@
+@use 'variables' as var;
+
+.textOpacity {
+  opacity: .6;
+  transition: opacity .7s;
+  &:hover {
+    opacity: 1;
+    transition:  opacity .2s;
+  }
+}
+.textLine {
+    &:hover {
+        background-image: unset;
+    }
+}
+.button {
+    // background-color: var.$key;
+    // color: var.$white;    
+    transition: background-color var.$easeInOut .7s, color var.$easeInOut .7s;
+    &:hover {
+        background-color: var.$white;
+        color: var.$key;    
+        transition: background-color var.$easeInOut .2s, color var.$easeInOut .2s;
+    }
+}
+.scaleSm {
+    transform: scale(1);
+    transition :transform var.$easeInOut .7s;
+    &:hover {
+        transform: scale(1.025);
+        transition :transform var.$easeInOut .2s;
+    }
+}
+.scaleMd {
+    transform: scale(1);
+    transition :transform var.$easeInOut .7s;
+    &:hover {
+        transform: scale(1.05);
+        transition :transform var.$easeInOut .2s;
+    }
+}

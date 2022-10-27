@@ -17,6 +17,7 @@ import styleImg from 'styles/CommonImg.module.scss'
 import styleTag from 'styles/CommonTag.module.scss'
 import styleLayout from 'styles/CommonLayout.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 import Link from 'next/link'
 import { ReactElement } from 'rehype-react/lib'
 // import CustomLink from './CustomLink'
@@ -110,7 +111,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
             {/* category */}
             <Link href={`/posts/category/${frontMatter.category}`}>
               <a
-                className={`${styleFont.en} ${styleTag.sm} ${style.headerInformationCategory}`}
+                className={`${styleFont.en} ${styleTag.sm} ${styleHover.button} ${style.headerInformationCategory}`}
                 // className={`${styleTag.default} ${style.headerInformationCategory}`}
               >
                 {frontMatter.category}

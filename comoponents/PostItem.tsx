@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import style from 'styles/PostItem.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 import { Post, Posts } from 'type'
 
 const PostItem = ({ post }: { post: Post }) => {
   return (
     <>
-      <li className={`${style.mainItem} postItem`}>
+      <li className={`${style.mainItem} ${styleHover.scaleSm} postItem`}>
         <Link href={`/posts/${post.slug}`}>
           <a className={`${style.mainItemLink} postItemLink`}>
             <span

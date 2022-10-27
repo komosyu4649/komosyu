@@ -6,6 +6,7 @@ import styleImg from 'styles/CommonImg.module.scss'
 import styleText from 'styles/CommonText.module.scss'
 import styleLayout from 'styles/CommonLayout.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 
 const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
   //   console.log(workData)
@@ -40,7 +41,7 @@ const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
                 href={workData.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${styleFont.en} ${styleText.link} ${style.headerContentDetailUrl}`}
+                className={`${styleFont.en} ${styleText.link} ${styleHover.textLine} ${style.headerContentDetailUrl}`}
               >
                 {workData.url}
               </a>

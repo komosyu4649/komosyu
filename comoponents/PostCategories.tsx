@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import style from 'styles/PostCategories.module.scss'
 import styleTag from 'styles/CommonTag.module.scss'
 import styleCurrent from 'styles/StateCurrent.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 import styleFont from 'styles/CommonFont.module.scss'
 import { Posts } from 'type'
 import useCurrent from 'hook/useCurrent'
@@ -22,7 +23,7 @@ const PostCategories = ({ posts }: Posts) => {
               <a
                 className={`${
                   urlPath.includes(category) && styleCurrent.category
-                } ${styleFont.enBold} ${styleTag.default}`}
+                } ${styleFont.enBold} ${styleTag.default} ${styleHover.button}`}
               >
                 {category}
               </a>

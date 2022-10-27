@@ -112,6 +112,9 @@
     background-repeat: no-repeat;
     background-size: 100% 1px;
     background-position: bottom;
+    &:hover {
+      background-image: unset;
+    }
   }
   ul {
     margin-top: 1.5rem;

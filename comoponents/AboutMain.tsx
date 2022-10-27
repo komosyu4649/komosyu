@@ -4,6 +4,7 @@ import style from 'styles/AboutMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import styleText from 'styles/CommonText.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
+import styleHover from "styles/StateHover.module.scss"
 
 const AboutMain = () => {
   const garellyImgs = [
@@ -100,7 +101,7 @@ const AboutMain = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${styleFont.en} ${styleText.link} ${style.mainPartContentItemLink}`}
+                    className={`${styleFont.en} ${styleText.link} ${styleHover.textLine} ${style.mainPartContentItemLink}`}
                   >
                     {link.url}
                   </a>
