@@ -81,24 +81,26 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
             {/* detail */}
             <div className={style.headerInformationDetail}>
               {/* name */}
-              <div className={style.headerInformationDetailPerson}>
-                <span
-                  className={`${styleImg.default} ${style.headerInformationDetailPersonIcon}`}
-                >
-                  <Image
-                    src="/asset/img/common/komosyu.jpg"
-                    alt=""
-                    quality="50"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </span>
-                <span
-                  className={`${styleFont.en} ${style.headerInformationDetailPersonName}`}
-                >
-                  komosyu
-                </span>
-              </div>
+              <Link href="/about">
+                <a className={style.headerInformationDetailPerson}>
+                  <span
+                    className={`${styleImg.default} ${style.headerInformationDetailPersonIcon}`}
+                  >
+                    <Image
+                      src="/asset/img/common/komosyu.jpg"
+                      alt=""
+                      quality="50"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </span>
+                  <span
+                    className={`${styleFont.en} ${style.headerInformationDetailPersonName}`}
+                  >
+                    komosyu
+                  </span>
+                </a>
+              </Link>
               {/* time */}
               <time
                 className={`${styleFont.en} ${style.headerInformationDetailTime}`}
