@@ -56,7 +56,8 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
   }
 
   // const toReactNode = (allContent: { allContent: JSX.Element }) => {
-  const toReactNode = (allContent: JSX.Element) => {
+  // const toReactNode = (allContent: JSX.Element) => {
+  const toReactNode = (allContent:any) => {
     return unified()
       .use(rehypeParse, {
         fragment: true,

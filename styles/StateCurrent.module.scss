@@ -9,6 +9,7 @@
 }
 .point {
   position: relative;
+  opacity: 1;
   &::before {
     position: absolute;
     // top: 2rem;
