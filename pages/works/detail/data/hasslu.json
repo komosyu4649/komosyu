@@ -5,8 +5,8 @@
   "type": "webサイト",
   "date": "2022.01",
   "url": "https://www.hasslu.com/",
-  "description": "hassluっていう社会学的なwebメディアを作ってみたからみてみてね！",
+  "description": "社会学的なコラムだったり、気になる人へのインタビューを書く場所がほしくてhass/uというメディアサイトを作ってみました。\n また、日常的なコラムだけでなく転職副業に取り組んでみて考えたこと感じたことをリアルタイムに発信しています。",
   "responsible": "ディレクション、デザイン、コーディング",
-  "technology": "Next.js, contentful, figma",
-  "about": "プライベートではじめてnext.jsを使ってみたんだけど、typescriptを使うのははじめてでまだできてないこととか、やりたいこととかたくさんあるのでもっといい感じにしていきたい"
+  "technology": "Next.js, next-sitemap, typescript, CSS Modules, contentful, figma, vercel",
+  "about": "仕事で一度Next.jsを使ってみて、実装しながらおもしろみを感じていたし、ちょうどこのサイトを作りたいと思っていたタイミングだったので、思い切ってNext.jsを使って実装してみました。\nNext.jsと今回使用したheadlesscmsであるcontentfulは仕事で使ったことがあったのだけれど、typescriptは初挑戦でワケもわからずに使っていたので、これから改修しないといけないところが山ほどありますね。。\nまた、他にも検索機能やseo対策などやりたい(やらなければいけない)ことが多いので時間があるときに、この辺りも進めていく予定です。"
 }

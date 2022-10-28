@@ -9,7 +9,7 @@ import styleFont from 'styles/CommonFont.module.scss'
 import styleHover from "styles/StateHover.module.scss"
 
 const WorkDetailMain = ({ workData }: { workData: WorkDetail }) => {
-  //   console.log(workData)
+    console.log(workData.about)
   return (
     <article className={style.container}>
       <div className={style.inner}>

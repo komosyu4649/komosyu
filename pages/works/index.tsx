@@ -29,6 +29,16 @@ export const getStaticProps: GetStaticProps = async () => {
       slug,
     }
   })
+  console.log(works)
+
+  works = works.sort((a, b) =>
+  new Date(
+    a.workData.date) >
+  new Date(
+    b.workData.date)
+    ? -1
+    : 1
+)
 
   return {
     props: {

@@ -81,6 +81,7 @@
   // font-size: 1.4rem;
   font-size: 1.6rem;
   line-height: 1.8;
+  white-space: pre-wrap;
 }
 .body {
   display: grid;
@@ -97,12 +98,14 @@
   // font-size: 1.6rem;
   font-size: 1.8rem;
   font-weight: bold;
+  white-space: pre-wrap;
 }
 .bodyDd {
   margin: 0;
   // font-size: 1.4rem;
   font-size: 1.6rem;
   line-height: 1.8;
+  white-space: pre-wrap;
 }
 
 @media screen and (max-width: var.$sp) {
