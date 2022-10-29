@@ -108,7 +108,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
               >
                 {frontMatter.modifiedDate
                   ? frontMatter.modifiedDate
-                  : frontMatter.publishedDate}
+                  :`updated : ${frontMatter.publishedDate}`}
               </time>
             </div>
             {/* category */}

@@ -68,8 +68,8 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
       tight: true,
       ordered: true,
     })
-    .use(remarkRehype)
-    .use(rehypeStringify)
+    .use(remarkRehype, { allowDangerousHtml:true })
+    .use(rehypeStringify, { allowDangerousHtml:true })
     .use(rehypeSlug)
     .process(content)
 
