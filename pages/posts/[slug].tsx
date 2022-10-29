@@ -13,9 +13,6 @@ import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import remarkPrism from 'remark-prism'
 import Meta from 'comoponents/Meta'
-// import { createElement } from 'react'
-// import rehypeParse from 'rehype-parse'
-// import rehypeReact from 'rehype-react'
 import { NextSeo, ArticleJsonLd } from 'next-seo'
 
 type ContextProps = {
@@ -33,15 +30,6 @@ const Posts: NextPage<{
   allContent: JSX.Element
 }> = ({ frontMatter, content, allContent }) => {
   const props = { frontMatter, content, allContent }
-  // console.log(props)
-  // const toReactNode = (allContent) => {
-  //   return unified()
-  //     .use(rehypeParse)
-  //     .use(rehypeReact, {
-  //       createElement,
-  //     })
-  //     .processSync(allContent).result
-  // }
   return (
     <Layout>
       <NextSeo
@@ -68,7 +56,6 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
 ) => {
   const context = params.params!
   const file = fs.readFileSync(`posts/${context.slug}.md`, 'utf-8')
-  // const { data, content } = matter(file)
   const { data, content } = matter(file)
 
   const result = await unified()
@@ -85,8 +72,9 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
     .use(rehypeStringify)
     .use(rehypeSlug)
     .process(content)
-  // console.log(result.value)
+
   const allContent = result.value
+
   return {
     props: { frontMatter: data, content, allContent },
   }
@@ -102,7 +90,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths,
     fallback: 'blocking',
-    // fallback: false,
   }
 }
 

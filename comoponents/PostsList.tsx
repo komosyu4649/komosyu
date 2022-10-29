@@ -14,7 +14,7 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
   // const store = useLoadMorePostsStore((state) => state)
   // const loadNumberState = store.loadNumber
   // // useState でやる場合はカテゴリーごとに表示件数を管理できるようにしないといけない
-  const loadPostNum = 3
+  const loadPostNum = 9
   const [loadNumberState, setLoadNumberState] = useState(loadPostNum)
   const handleClickMore = () => {
     setLoadNumberState((loadNumberState) => loadNumberState + loadPostNum)

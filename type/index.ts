@@ -2,6 +2,7 @@ export type Posts = {
   posts: [
     {
       frontMatter: {
+        public: boolean
         title: string
         publishedDate: string
         modifiedDate: string
@@ -17,6 +18,7 @@ export type FilteredPosts = {
   filteredPosts: [
     {
       frontMatter: {
+        public: boolean
         title: string
         publishedDate: string
         modifiedDate: string
@@ -30,6 +32,7 @@ export type FilteredPosts = {
 
 export type Post = {
   frontMatter: {
+    public: boolean
     title: string
     publishedDate: string
     modifiedDate: string
@@ -41,6 +44,7 @@ export type Post = {
 
 export type PostFrontMatter = {
   // frontMatter: {
+  public: boolean
   title: string
   publishedDate: string
   modifiedDate: string

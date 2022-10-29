@@ -46,6 +46,8 @@ export const getStaticProps: GetStaticProps = async () => {
       : 1
   )
 
+  posts = posts.filter((post) => post.frontMatter.public)
+
   return {
     props: {
       posts,

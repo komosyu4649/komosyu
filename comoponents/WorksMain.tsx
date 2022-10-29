@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 
 // const WorksMain = ({ works }: { works: WorkData[] }) => {
 const WorksMain = ({ works }: { works: WorkData[] }) => {
-  const publicPosts = works.filter((work) => work.workData.public)
+  // const publicPosts = works.filter((work) => work.workData.public)
   const [responsive, setResponsive] = useState(false)
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const WorksMain = ({ works }: { works: WorkData[] }) => {
   return (
     <div className={style.container}>
       <ul className={style.list}>
-        {publicPosts.map((work: WorkData, index: number) =>
+        {works.map((work: WorkData, index: number) =>
           work.workData.public ? (
             <li className={style.item} key={index}>
               <Link href={`/works/detail/${work.slug}`}>

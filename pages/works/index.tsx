@@ -29,7 +29,6 @@ export const getStaticProps: GetStaticProps = async () => {
       slug,
     }
   })
-  console.log(works)
 
   works = works.sort((a, b) =>
   new Date(
@@ -38,7 +37,9 @@ export const getStaticProps: GetStaticProps = async () => {
     b.workData.date)
     ? -1
     : 1
-)
+  )
+
+  works = works.filter((work) => work.workData.public)
 
   return {
     props: {
