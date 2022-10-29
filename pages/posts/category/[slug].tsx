@@ -12,6 +12,7 @@ type CategoryProps = {
   posts: [
     {
       frontMatter: {
+        public: boolean
         title: string
         publishedDate: string
         modifiedDate: string
@@ -28,8 +29,6 @@ const Category: NextPage<CategoryProps> = ({ posts, category }) => {
   const filteredPosts = posts.flatMap((post) =>
     post.frontMatter.category === category ? post : []
   )
-
-  console.log(filteredPosts)
 
   return (
     <Layout>
@@ -71,6 +70,8 @@ export const getStaticProps: GetStaticProps = async (params) => {
       ? -1
       : 1
   )
+
+  posts = posts.filter((post) => post.frontMatter.public)
 
   return {
     props: {
