@@ -118,8 +118,15 @@
   }
   ul {
     margin-top: 1.5rem;
+    padding: 1.5rem 5rem;
+    background-color: var.$key_week;
+    border-radius: 1rem;
     li {
       margin: 0.5rem 0;
+      // font-size: 1.4rem;
+      font-size: 1.6rem;
+      line-height: 2;
+      list-style-type: disc;
     }
   }
 
