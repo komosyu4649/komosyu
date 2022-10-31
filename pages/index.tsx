@@ -12,7 +12,7 @@ import { NextSeo } from 'next-seo'
 const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <NextSeo title="top title" description="top description" />
+      <NextSeo title="" description="" />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
