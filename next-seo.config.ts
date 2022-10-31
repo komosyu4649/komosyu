@@ -3,11 +3,11 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://komosyu.com/',
+    url: 'https://komosyu.dev/',
     siteName: 'komosyu',
     images: [
       {
-        url: 'https://komosyu.com/ogp.jpg',
+        url: 'https://komosyu.dev/ogp.jpg',
         width: 800,
         height: 600,
         alt: 'Og Image Alt',

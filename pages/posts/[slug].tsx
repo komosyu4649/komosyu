@@ -38,7 +38,7 @@ const Posts: NextPage<{
       />
       <ArticleJsonLd
         type="Blog"
-        url="https://komosyu.com/"
+        url="https://komosyu.dev/"
         title={props.frontMatter.title}
         images={[]}
         datePublished={props.frontMatter.publishedDate}
@@ -74,7 +74,6 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
     .process(content)
 
   const allContent = result.value
-  console.log(allContent)
 
   return {
     props: { frontMatter: data, content, allContent },

@@ -33,7 +33,7 @@ const AboutMain = () => {
     },
     {
       name: '・website:',
-      url: 'https://komosyu.com',
+      url: 'https://komosyu.dev',
     },
   ]
 

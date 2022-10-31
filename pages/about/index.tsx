@@ -11,7 +11,7 @@ const About = () => {
       <SocialProfileJsonLd
         type="Person"
         name="shuhei komori"
-        url="https://komosyu.com/"
+        url="https://komosyu.dev/"
         sameAs={[
           'https://github.com/komosyu4649',
           'https://twitter.com/komosyu4649',

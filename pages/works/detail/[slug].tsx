@@ -23,7 +23,7 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
       <NextSeo title={workData.name} description={workData.description} />
       <ArticleJsonLd
         type="Blog"
-        url="https://komosyu.com/"
+        url="https://komosyu.dev/"
         title={workData.name}
         images={[]}
         datePublished={workData.date}
