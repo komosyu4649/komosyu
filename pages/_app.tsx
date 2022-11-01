@@ -13,6 +13,7 @@ import * as gtag from "../utils/gtag"
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
+    console.log(gtag)
     const handleRouteChange = (url: any) => {
       gtag.pageview(url)
     }
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete",handleRouteChange)
     }
   },[router.events])
-  
+
   return (
     <>
       <DefaultSeo {...SEO} />
