@@ -46,9 +46,11 @@ const AboutMain = () => {
           <h2 className={`${styleFont.enBold} ${style.mainPartTitle}`}>Bio</h2>
           <div className={style.mainPartContent}>
             <p className={style.mainPartContentText}>
-              わたしはこういう感じの仕事をしている人です。
+              都内のweb制作会社でwebディベロッパーをとして働いています。
               <br />
-              こういうことに興味があって、こういうこともしてみたいなーなんて考えています。
+              業務ではインタラクションや演出に特化したwebサイトを作ることが多いです。
+              <br/>
+              最近はNext.jsを使ったwebサイトやwebサービスを作るのが楽しいです。
             </p>
           </div>
         </div>
@@ -61,7 +63,7 @@ const AboutMain = () => {
             <p className={style.mainPartContentText}>
               趣味で写真を撮るのとか好きです。
               <br />
-              あと、webメディアとかも運営していたりするからみてみてね。
+              あと、webメディアとかも運営していたりするから見てみてください。
             </p>
             <div className={style.mainPartContentGarelly}>
               <ul className={style.mainPartContentGarellyList}>
