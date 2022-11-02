@@ -107,8 +107,8 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
                 className={`${styleFont.en} ${style.headerInformationDetailTime}`}
               >
                 {frontMatter.modifiedDate
-                  ? frontMatter.modifiedDate
-                  :`updated : ${frontMatter.publishedDate}`}
+                  ? `updated : ${frontMatter.modifiedDate}`
+                  : frontMatter.publishedDate}
               </time>
             </div>
             {/* category */}
