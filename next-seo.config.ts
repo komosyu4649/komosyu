@@ -10,7 +10,7 @@ export default {
         url: 'https://komosyu.dev/ogp.jpg',
         width: 800,
         height: 600,
-        alt: 'Og Image Alt',
+        alt: 'komosyu',
       },
     ],
   },

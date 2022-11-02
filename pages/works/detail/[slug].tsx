@@ -25,7 +25,9 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
         type="Blog"
         url="https://komosyu.dev/"
         title={workData.name}
-        images={[]}
+        images={[
+          `https://komosyu.dev/asset/${workData.thumbnail}`
+        ]}
         datePublished={workData.date}
         authorName="komosyu"
         description={workData.description}
