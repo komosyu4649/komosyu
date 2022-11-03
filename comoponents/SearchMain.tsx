@@ -15,8 +15,8 @@ const SearchMain = ({ posts }: Posts) => {
         .includes(searchValue.toLowerCase()) ||
       post.frontMatter.publishedDate
         .toLowerCase()
-        //   .includes(searchValue.toLowerCase()) ||
-        // post.frontMatter.modifiedDate
+        .includes(searchValue.toLowerCase()) ||
+      post.frontMatter.modifiedDate
         .toLowerCase()
         .includes(searchValue.toLowerCase()) ||
       post.frontMatter.category
