@@ -12,7 +12,7 @@ const path = 'pages/works/detail/data'
 const Works = ({ works }: { works: WorkData[] }) => {
   return (
     <Layout>
-      <NextSeo title="" description="" />
+      <NextSeo title="works" description="これまでJamstackで制作・開発してきたwebサイト・サービスの実績を掲載しています" />
       <WorksMain works={works} />
     </Layout>
   )

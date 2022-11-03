@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo'
 const Search: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <NextSeo title="" description="" />
+      <NextSeo title="search" description="キーワードを入力することで、全ての記事の中から該当する記事を検索することができます" />
       <SearchMain posts={posts} />
     </Layout>
   )

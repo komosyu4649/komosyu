@@ -12,12 +12,13 @@ import { NextSeo } from 'next-seo'
 const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <NextSeo title="top title" description="top description" />
+      <NextSeo title="frontend web developper" description="next.jsなど流行のフロントエンド技術を中心に発信していきます" />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
   )
 }
+
 
 export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync('posts')
@@ -45,6 +46,8 @@ export const getStaticProps: GetStaticProps = async () => {
       ? -1
       : 1
   )
+
+  posts = posts.filter((post) => post.frontMatter.public)
 
   return {
     props: {
