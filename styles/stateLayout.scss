@@ -20,7 +20,8 @@
   .postItemLink {
     position: relative;
     display: block;
-    padding: 2rem 2rem 3rem;
+    // padding: 2rem 2rem 3rem;
+    padding: 2rem 2rem 2.5rem;
   }
   .postItemLinkCategory {
     display: inline-flex;
@@ -37,7 +38,8 @@
   .postItemLinkTitle {
     // margin-top: 2rem;
     // margin-top: 1.5rem;
-    margin: 1.5rem 0 0;
+    // margin: 1.5rem 0 0;
+    margin: 1rem 0 0;
     padding-bottom: 0;
     // font-size: 1.6rem;
     font-weight: bold;
