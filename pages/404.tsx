@@ -7,7 +7,7 @@ import React from 'react'
 const NotFound = () => {
   return (
     <Layout>
-      <NextSeo title="" description="" />
+      <NextSeo title="page not found" description="お探しのページは見つかりませんでした" />
       <NotFoundMain />
     </Layout>
   )

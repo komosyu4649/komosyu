@@ -7,7 +7,7 @@ import React from 'react'
 const About = () => {
   return (
     <Layout>
-      <NextSeo title="" description="" />
+      <NextSeo title="about" description="komosyuのプロフィール" />
       <SocialProfileJsonLd
         type="Person"
         name="shuhei komori"

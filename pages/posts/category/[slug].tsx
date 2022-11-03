@@ -33,7 +33,7 @@ const Category: NextPage<CategoryProps> = ({ posts, category }) => {
   return (
     <Layout>
       {/* <Meta title="" description="" /> */}
-      <NextSeo title="" description="" />
+      <NextSeo title={category} description={`${category}について扱った記事一覧`} />
       <PostCategories posts={posts} />
       <PostsList posts={filteredPosts} />
     </Layout>

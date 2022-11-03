@@ -20,7 +20,7 @@ const Detail: NextPage<{ workData: WorkDetail }> = ({
 }) => {
   return (
     <Layout>
-      <NextSeo title={workData.name} description={workData.description} />
+      <NextSeo title={`${workData.name} - works`} description={workData.description} />
       <ArticleJsonLd
         type="Blog"
         url="https://komosyu.dev/"
