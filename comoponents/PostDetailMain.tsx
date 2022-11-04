@@ -22,11 +22,6 @@ import Link from 'next/link'
 import { ReactElement } from 'rehype-react/lib'
 // import CustomLink from './CustomLink'
 
-type CustomLinkProps = {
-  href: string
-  children: [string]
-}
-
 const PostDetailMain = ({ props }: { props: PostContext }) => {
   const frontMatter = props.frontMatter
   const content = props.content

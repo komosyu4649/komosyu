@@ -10,17 +10,7 @@ import { ArticleJsonLd, NextSeo } from 'next-seo'
 
 type CategoryProps = {
   posts: [
-    {
-      frontMatter: {
-        public: boolean
-        title: string
-        publishedDate: string
-        modifiedDate: string
-        description: string
-        category: string
-      }
-      slug: string
-    }
+    Post
   ]
   category: string
 }
