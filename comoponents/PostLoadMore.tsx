@@ -4,7 +4,7 @@ import style from 'styles/PostLoadMore.module.scss'
 import styleButton from 'styles/styleButton.module.scss'
 
 const PostLoadMore = () => {
-  const loadPostNum = 3
+  const loadPostNum = 9
   const store = useLoadMorePostsStore((state) => state)
   const handleClickMore = () => {
     store.setLoadNumber(store.loadNumber + loadPostNum)

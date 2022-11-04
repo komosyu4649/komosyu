@@ -1,11 +1,5 @@
 import Head from 'next/head'
 
-type Props = {
-  title: string
-  description: string
-}
-
-// const Meta = ({ title, description }: Props) => {
 const Meta = () => {
   return (
     <Head>
