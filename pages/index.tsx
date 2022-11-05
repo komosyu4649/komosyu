@@ -19,7 +19,6 @@ const Home: NextPage<Posts> = ({ posts }) => {
   )
 }
 
-
 export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync('posts')
   let posts = files.map((fileName) => {
