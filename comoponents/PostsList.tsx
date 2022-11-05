@@ -48,6 +48,7 @@ const PostsList = ({ posts }: { posts: Post[] }) => {
         <button
           className={`${style.uiSwitch} postSwitch`}
           onClick={handlePostLayoutMode}
+          aria-label="switch layout style"
         >
           <span className={`${style.uiSwitchInside} postSwitchInside`}></span>
         </button>
