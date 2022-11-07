@@ -51,7 +51,7 @@ const WorksMain = ({ works }: { works: WorkData[] }) => {
                   <div className={`${styleImg.default} ${style.itemLinkImg}`}>
                     <Image
                       src={work.workData.thumbnail}
-                      alt=""
+                      alt={work.workData.name}
                       className={`${styleHover.scaleMd}`}
                       layout="responsive"
                       objectFit="cover"
