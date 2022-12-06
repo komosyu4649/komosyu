@@ -158,6 +158,14 @@
     font-size: 1.6rem;
     border-radius: 1rem;
   }
+
+  blockquote {
+    padding: 1rem 3rem;
+    background-color: var.$key_week;
+    p {
+      margin: 0;
+    }
+  }
 }
 
 @media screen and (max-width: var.$sp) {
