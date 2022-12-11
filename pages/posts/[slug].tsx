@@ -77,6 +77,7 @@ export const getStaticProps: GetStaticProps<ContextProps, Params> = async (
 
   return {
     props: { frontMatter: data, content, allContent },
+    revalidate: 10
   }
 }
 
