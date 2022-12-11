@@ -28,6 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       frontMatter: data,
       slug,
+      revalidate: 10
     }
   })
 
