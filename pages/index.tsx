@@ -12,7 +12,10 @@ import { NextSeo } from 'next-seo'
 const Home: NextPage<Posts> = ({ posts }) => {
   return (
     <Layout>
-      <NextSeo title="frontend web developper" description="next.jsなど流行のフロントエンド技術を中心に発信していきます" />
+      <NextSeo
+        title="frontend web developper"
+        description="next.jsなど流行のフロントエンド技術を中心に発信していきます"
+      />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
     </Layout>
@@ -28,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       frontMatter: data,
       slug,
-      revalidate: 10
+      revalidate: 10,
     }
   })
 
