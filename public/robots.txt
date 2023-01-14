@@ -3,8 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.komosyu.dev/
+Host: https://www.komosyu.dev
 
 # Sitemaps
 Sitemap: https://www.komosyu.dev/sitemap.xml
-Sitemap: https://www.komosyu.dev/sitemap-0.xml
