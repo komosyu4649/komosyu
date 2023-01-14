@@ -17,7 +17,7 @@ import styleImg from 'styles/CommonImg.module.scss'
 import styleTag from 'styles/CommonTag.module.scss'
 import styleLayout from 'styles/CommonLayout.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
-import styleHover from "styles/StateHover.module.scss"
+import styleHover from 'styles/StateHover.module.scss'
 import Link from 'next/link'
 import { ReactElement } from 'rehype-react/lib'
 // import CustomLink from './CustomLink'
@@ -52,7 +52,7 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
 
   // const toReactNode = (allContent: { allContent: JSX.Element }) => {
   // const toReactNode = (allContent: JSX.Element) => {
-  const toReactNode = (allContent:any) => {
+  const toReactNode = (allContent: any) => {
     return unified()
       .use(rehypeParse, {
         fragment: true,
@@ -101,9 +101,9 @@ const PostDetailMain = ({ props }: { props: PostContext }) => {
               <time
                 className={`${styleFont.en} ${style.headerInformationDetailTime}`}
               >
-                {frontMatter.modifiedDate
-                  ? `updated : ${frontMatter.modifiedDate}`
-                  : frontMatter.publishedDate}
+                {frontMatter.publishedDate === frontMatter.modifiedDate
+                  ? frontMatter.publishedDate
+                  : `updated : ${frontMatter.modifiedDate}`}
               </time>
             </div>
             {/* category */}
