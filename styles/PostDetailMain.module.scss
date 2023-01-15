@@ -106,6 +106,7 @@
     code {
       padding: 0.5rem;
       background-color: var.$key_week;
+      word-wrap: break-word;
     }
   }
   a {
@@ -148,6 +149,10 @@
     ol {
       padding: 1rem 3rem;
     }
+  }
+
+  li {
+    word-wrap: break-word;
   }
 
   img {
