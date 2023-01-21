@@ -27,6 +27,8 @@
     margin-top: 5rem;
   }
   .list {
+    flex-wrap: nowrap;
     gap: 1.5rem;
+    overflow-x: scroll;
   }
 }
