@@ -4,7 +4,7 @@ import style from 'styles/AboutMain.module.scss'
 import styleImg from 'styles/CommonImg.module.scss'
 import styleText from 'styles/CommonText.module.scss'
 import styleFont from 'styles/CommonFont.module.scss'
-import styleHover from "styles/StateHover.module.scss"
+import styleHover from 'styles/StateHover.module.scss'
 
 const AboutMain = () => {
   const garellyImgs = [
@@ -49,7 +49,7 @@ const AboutMain = () => {
               都内のweb制作会社でwebディベロッパーをとして働いています。
               <br />
               業務ではインタラクションや演出に特化したwebサイトを作ることが多いです。
-              <br/>
+              <br />
               最近はNext.jsを使ったwebサイトやwebサービスを作るのが楽しいです。
             </p>
           </div>
