@@ -14,7 +14,7 @@ const Home: NextPage<Posts> = ({ posts }) => {
     <Layout>
       <NextSeo
         title="frontend web developper"
-        description="next.jsなど流行のフロントエンド技術を中心に発信していきます"
+        description="Next.jsなど流行のフロントエンド技術を中心に発信していきます"
       />
       <PostCategories posts={posts} />
       <PostsList posts={posts} />
