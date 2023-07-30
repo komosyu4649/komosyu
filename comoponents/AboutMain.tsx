@@ -46,11 +46,13 @@ const AboutMain = () => {
           <h2 className={`${styleFont.enBold} ${style.mainPartTitle}`}>Bio</h2>
           <div className={style.mainPartContent}>
             <p className={style.mainPartContentText}>
-              都内のweb制作会社でwebディベロッパーをとして働いています。
+              都内の事業会社でエンジニアをしています。
               <br />
-              業務ではインタラクションや演出に特化したwebサイトを作ることが多いです。
+              主にフロントエンドを担当しています。
               <br />
-              最近はNext.jsを使ったwebサイトやwebサービスを作るのが楽しいです。
+              今はNext.js/Nestjs/AWSを使った開発をしています。
+              <br />
+              UI作りが好きで個人開発もしています。
             </p>
           </div>
         </div>

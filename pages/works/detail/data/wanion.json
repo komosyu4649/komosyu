@@ -1,12 +1,12 @@
 {
   "public": true,
-  "thumbnail": "/asset/img/works/detail/wanion.jpg",
-  "name": "wanion",
+  "thumbnail": "/asset/img/works/detail/shishanchu.jpg",
+  "name": "shishanchu",
   "type": "webサービス",
-  "date": "2022.09",
-  "url": "https://wanion-anvd.vercel.app/",
-  "description": "転職や投資など、資産を増やしたい人に役立つ情報を共有できるサービスを作ってみました。",
-  "responsible": "ディレクション、デザイン、コーディング",
-  "technology": "Next.js, typescript, prisma, planetscale, tailwind.css, figma, vercel",
-  "about": "webサービス自体作るのがはじめてで、とりあえずNext.jsで簡単に試せそうで今風のprismaとplanetscaleを使ってのcrud操作程度の機能で実装してみました。\n 本当は認証・ユーザー機能も実装したかったのですが、すんなり実装できず予め決めていたスケジュールをオーバーしてしてしまったので、一旦見送ることになりました。\n 時間を見つけてその辺りの機能も追加してみようと思います。\n また、前々から気になっていたtailwind.cssをはじめて使ってみたのですが、なかなか細かい調整が面倒で手をつけていないところもあるので、ここも直さないといけませんね。"
+  "date": "2023.08",
+  "url": "https://www.shishanchu.com/",
+  "description": "全国のシーシャバーの情報を共有するプラットフォームサービスです",
+  "responsible": "ディレクション、デザイン、開発、営業、マーケティング",
+  "technology": "Next.js, Typescript, TailwindCSS, microCMS, Figma, Amplify",
+  "about": "Next.js/Typescriptで実装しました。\nシーシャバーのプラットフォームサービスでポータルサイトのように管理人が一括で情報を管理するものではなく、店舗の方でコンテンツを管理してもらうシステムになっているのでそのシステムはmicrocmsで各店舗のアカウントを作成して運用してもらう設計にしました。\n料金体系やユーザー権限などがちょっとネックで当初はオープンソースのStrapiを検討していたのですが、ホスティング料金や店舗の方に使っていただくことを考えると圧倒的にmicrocmsが使いやすいということで途中から乗せ替えることにしました。\n営業やマーケティングがまるでダメでプラットフォーム系のサービスはハードルが高いんだな...と経験することができました。\nその辺りの勉強をしつつこれからもしばらく集客を頑張っていきます。"
 }
