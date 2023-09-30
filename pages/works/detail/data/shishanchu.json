@@ -1,0 +1,12 @@
+{
+  "public": true,
+  "thumbnail": "/asset/img/works/detail/shishanchu.jpg",
+  "name": "shishanchu",
+  "type": "webサービス",
+  "date": "2023.08",
+  "url": "https://www.shishanchu.com/",
+  "description": "全国のシーシャバーの情報を共有するプラットフォームサービスです",
+  "responsible": "企画、デザイン、開発、営業、マーケティング",
+  "technology": "Next.js, Nestjs, Typescript, TailwindCSS, microCMS, Figma, Amplify, render, PostgresSQL",
+  "about": "Next.js/Nestjsで実装しました。\nシーシャバーのプラットフォームサービスでポータルサイトのように管理人が一括で情報を管理するものではなく、店舗の方でコンテンツを管理してもらうシステムになっているのでそのシステムはmicrocmsで各店舗のアカウントを作成して運用してもらう設計にしました。\n料金体系やユーザー権限などがちょっとネックで当初はオープンソースのStrapiを検討していたのですが、ホスティング料金や店舗の方に使っていただくことを考えると圧倒的にmicrocmsが使いやすいということで途中から乗せ替えることにしました。\nそれからユーザーが気に入った店舗・スタッフ・コンテンツを取っておけるように認証をつくってみました。\n営業やマーケティングがまるでダメでプラットフォーム系のサービスはハードルが高いんだな...と経験することができました。\nその辺りの勉強をしつつこれからもしばらく集客を頑張っていきます。"
+}

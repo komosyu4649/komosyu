@@ -6,7 +6,7 @@
 .list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  overflow-x: scroll;
   gap: 2rem;
 }
 .itemLink {
@@ -27,8 +27,6 @@
     margin-top: 5rem;
   }
   .list {
-    flex-wrap: nowrap;
     gap: 1.5rem;
-    overflow-x: scroll;
   }
 }
