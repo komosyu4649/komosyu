@@ -1,0 +1,12 @@
+{
+  "public": true,
+  "thumbnail": "/asset/img/works/detail/design-engineer-note.jpg",
+  "name": "デザインエンジニアNOTE",
+  "type": "Webメディア",
+  "date": "2024.06",
+  "url": "https://design-engineer-note.com/",
+  "description": "デザインエンジニアとしての業務をしていく中で、他のデザインエンジニアのキャリアやナレッジについて知る機会が少ないことを課題に感じていたので、それならば自分でいろんな人に話を聞いてみよう！ということではじめたブログです。",
+  "responsible": "ディレクション、デザイン、コーディング",
+  "technology": "Astro, TypeScript, TailwindCSS, Newt, Figma, Cloudflare",
+  "about": "使い慣れているのはNext.jsですが、コンテンツ優先のWebメディアを作るのにはAstroが向いていると感じたので、Astroで実装してみました。 \n また、CMSは国産HeadlessCMSであるNewtにてコンテンツを管理しています。 \n 今後はコンテンツを増やしていって記事の検索機能やタグ機能などを追加していきたいですね。"
+}
