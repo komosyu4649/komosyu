@@ -12,7 +12,10 @@ const path = 'pages/works/detail/data'
 const Works = ({ works }: { works: WorkData[] }) => {
   return (
     <Layout>
-      <NextSeo title="works" description="これまでJamstackで制作・開発してきたwebサイト・サービスの実績を掲載しています" />
+      <NextSeo
+        title="works"
+        description="これまでJamstackで制作・開発してきたwebサイト・サービスの実績を掲載しています"
+      />
       <WorksMain works={works} />
     </Layout>
   )
@@ -31,12 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
   })
 
   works = works.sort((a, b) =>
-  new Date(
-    a.workData.date) >
-  new Date(
-    b.workData.date)
-    ? -1
-    : 1
+    new Date(a.workData.date) > new Date(b.workData.date) ? -1 : 1
   )
 
   works = works.filter((work) => work.workData.public)
